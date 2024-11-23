@@ -1,5 +1,5 @@
-# Chicago95
-#### XFCE / Xubuntu Windows 95 Total Conversion
+# MENT2K
+#### XFCE / Xubuntu Windows 2000 look and feel.
 
 <p align="center">
 <img src="Screenshots/Chicago95_Desktop.png" alt="Chicago95 Desktop"/>
@@ -7,18 +7,11 @@
 
 *Click [here](Screenshots/SCREENSHOTS.md) for more screenshots*
 
-I was unhappy with the various XFCE/GTK2/GTK3 Windows 95 based themes and decided to make one that was more consistent across the board for theming.
+I am considering to make a theme which looks like Windows 2000 since I like the interface.
 
 ### Included in this theme:
 
-- Icons to complete the icon theme started with Classic95
-- GTK2 and GTK3 themes
-- Edited Redmond XFWM theme to more accurately reflect Windows 95
-- Chicago95 Plus! A tool to preview and install Windows 95/98/ME/XP themes
-- Plymouth theme created from scratch
-- An MS-DOS inspired theme for oh-my-zsh
-- Partial support for HiDPI monitors
-- Partial icon theme for LibreOffice 6+
+- Not much yet...
 
 ### Requirements:
 
@@ -26,9 +19,7 @@ I was unhappy with the various XFCE/GTK2/GTK3 Windows 95 based themes and decide
 - Xfce 4.12, 4.14, 4.16
 - gtk2-engines-pixbuf (Recommended for GTK2 applications)
 - The xfce4-panel-profiles package
-- A Window compositor
-
-(If your are using an older desktop that uses GTK3.18, you can use [this forked version of the theme.](https://github.com/EMH-Mark-I/Chicago95-Custom-XUbuntu-16.04-))
+- A Window compositor (Picom)
 
 -----
 
