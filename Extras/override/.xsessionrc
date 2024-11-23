@@ -1,2 +1,0 @@
-#Disable overlay scrollbars
-export GTK_OVERLAY_SCROLLING=0
