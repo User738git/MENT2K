@@ -12,6 +12,7 @@ I am considering to make a theme which looks like Windows 2000 since I like the 
 ### Included in this theme:
 
 - Not much yet...
+- Considering to add a modified SE98 icon theme.
 
 ### Requirements:
 
@@ -31,17 +32,7 @@ I am considering to make a theme which looks like Windows 2000 since I like the 
 
 ## Installation
 
-### Packages:
-
-|Distro|Package Name/Link|
-|:----:|:----:|
-| Debian 9 | [obs-repo] |
-| Debian 10 | [obs-repo] |
-| Debian Testing/Unstable | [obs-repo] |
-| Ubuntu 18.04 - 20.04 | [obs-repo] |
-
-### Manual installation and setup instructions:
-[Click here](INSTALL.md) for install steps.
+Just put "MENT2K" which is located in /Theme/ in this repo into ~/.themes.
 
 ### Install the LibreOffice icon theme from Chicago95:
 [Click here](https://github.com/grassmunk/Chicago95/blob/master/Extras/libreoffice-chicago95-iconset/README.md) for installing the LibreOffice Chicago95 icon theme.
