@@ -49,7 +49,7 @@ I am considering to make a theme which looks like Windows 2000 since I like the 
 ----
 ## Miscellaneous
 
-### Desktop comparison
+### Desktop comparison (Picture 1 taken from Windows 2000)
 <img src="Screenshots/Comparison.png" alt="Desktop comp"/>
 
 ### Screenshots:
