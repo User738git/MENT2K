@@ -55,9 +55,6 @@ I am considering to make a theme which looks like Windows 2000 since I like the 
 ### Screenshots:
 [Click here to view screenshots](Screenshots/SCREENSHOTS.md)
 
-### IRC server:
-[Click here](https://web.emhmki.org:8443/) to connect to the IRC server. Please read server rules and be kind.
-
 ----
 ### Forked code
 Chicago95: https://github.com/grassmunk/chicago95
