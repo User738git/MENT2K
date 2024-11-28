@@ -25,7 +25,7 @@ I am considering to make a theme which looks like Windows 2000 since I like the 
 
 ## Documentation
 
-[Click here](INSTALL.md) for Chicago95 documentation and extra features.
+[Click here](INSTALL.md) for Chicago95 documentation and extra features (just from Chicago95).
 
 -----
 
@@ -43,8 +43,8 @@ I am considering to make a theme which looks like Windows 2000 since I like the 
 ### Manual installation and setup instructions:
 [Click here](INSTALL.md) for install steps.
 
-### Install the LibreOffice icon theme:
-[Click here](Extras/libreoffice-chicago95-iconset/README.md) for installing the LibreOffice Chicago95 icon theme.
+### Install the LibreOffice icon theme from Chicago95:
+[Click here](https://github.com/grassmunk/Chicago95/blob/master/Extras/libreoffice-chicago95-iconset/README.md) for installing the LibreOffice Chicago95 icon theme.
 
 ----
 ## Miscellaneous
