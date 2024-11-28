@@ -2,7 +2,7 @@
 #### XFCE / Xubuntu Windows 2000 look and feel.
 
 <p align="center">
-<img src="Screenshots/Chicago95_Desktop.png" alt="Chicago95 Desktop"/>
+<img src="Screenshots/MENT2K-screenshot.png" alt="Chicago95 Desktop"/>
 </p>
 
 *Click [here](Screenshots/SCREENSHOTS.md) for more screenshots*
