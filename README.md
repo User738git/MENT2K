@@ -2,7 +2,7 @@
 #### XFCE / Xubuntu Windows 2000 look and feel.
 
 <p align="center">
-<img src="Screenshots/MENT2K-screenshot.png" alt="Chicago95 Desktop"/>
+<img src="Screenshots/MENT2K-screenshot.png" alt="Desktop"/>
 </p>
 
 *Click [here](Screenshots/SCREENSHOTS.md) for more screenshots*
@@ -48,6 +48,9 @@ I am considering to make a theme which looks like Windows 2000 since I like the 
 
 ----
 ## Miscellaneous
+
+### Desktop comparison
+<img src="Screenshots/Comparison.png" alt="Desktop comp"/>
 
 ### Screenshots:
 [Click here to view screenshots](Screenshots/SCREENSHOTS.md)
