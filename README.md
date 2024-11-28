@@ -63,6 +63,8 @@ Just put "MENT2K" which is located in /Theme/ in this repo into ~/.themes.
 
 [aerothemeplasma](https://gitgud.io/wackyideas/aerothemeplasma/)
 
+[SE98](https://github.com/nestoris/Win98SE)
+
 ----
 ### Forked code
 Chicago95: https://github.com/grassmunk/chicago95
