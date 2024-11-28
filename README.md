@@ -43,21 +43,11 @@ I am considering to make a theme which looks like Windows 2000 since I like the 
 ### Manual installation and setup instructions:
 [Click here](INSTALL.md) for install steps.
 
-### Install a Microsoft Windows Plus! theme:
-[Click here](Plus/README.MD) for installing custom themes.
-
-### Install the Plymouth boot splash theme:
-[Click here](Plymouth/) for install steps.
-
 ### Install the LibreOffice icon theme:
 [Click here](Extras/libreoffice-chicago95-iconset/README.md) for installing the LibreOffice Chicago95 icon theme.
 
 ----
 ## Miscellaneous
-
-### KDE Support (experimental):
-- SDDM Logon Manager:: Click `Install from file...` in Loggin Screen (SDDM) manager. Select `SDDM/Chicago95.tar.gz` to install the theme. 
-- Splash Screen: `plasmapkg2 -t lookandfeel -i KDE/Splash/chicago95.splashscreen`
 
 ### Screenshots:
 [Click here to view screenshots](Screenshots/SCREENSHOTS.md)
@@ -66,7 +56,9 @@ I am considering to make a theme which looks like Windows 2000 since I like the 
 [Click here](https://web.emhmki.org:8443/) to connect to the IRC server. Please read server rules and be kind.
 
 ----
-
+### Forked code
+Chicago95: https://github.com/grassmunk/chicago95
+Redmond97: https://github.com/matthewmx86/Redmond97
 ### Code and license
 License: GPL-3.0+/MIT
 
