@@ -40,7 +40,7 @@ Just put "MENT2K" which is located in /Theme/ in this repo into ~/.themes.
 [Click here](https://github.com/grassmunk/Chicago95/blob/master/Extras/libreoffice-chicago95-iconset/README.md) for installing the LibreOffice Chicago95 icon theme.
 
 ----
-## Miscellaneous
+## Pictures
 
 ### Desktop comparison (Picture 1 taken from Windows 2000)
 <img src="Screenshots/Comparison.png" alt="Desktop comp"/>
@@ -50,6 +50,18 @@ Just put "MENT2K" which is located in /Theme/ in this repo into ~/.themes.
 
 ### Screenshots:
 [Click here to view screenshots](Screenshots/SCREENSHOTS.md)
+
+----
+### Projects by other people you should check out:
+[Chicago95](https://github.com/grassmunk/chicago95)
+
+[Redmond97](https://github.com/matthewmx86/Redmond97)
+
+[Ice2K.sys](https://toiletflusher.neocities.org/ice2k/)
+
+[xfce-winxp-tc](https://github.com/rozniak/xfce-winxp-tc)
+
+[aerothemeplasma](https://gitgud.io/wackyideas/aerothemeplasma/)
 
 ----
 ### Forked code
