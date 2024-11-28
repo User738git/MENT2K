@@ -9,10 +9,11 @@
 
 I am considering to make a theme which looks like Windows 2000 since I like the interface.
 
-### Included in this theme:
+### Included in this theme + future inclusions:
 
 - Not much yet...
 - Considering to add a modified SE98 icon theme.
+- Link to SE98 icon theme: [Click here.] (https://github.com/nestoris/Win98SE?tab=readme-ov-file)
 
 ### Requirements:
 
