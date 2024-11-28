@@ -64,7 +64,7 @@ Redmond97: https://github.com/matthewmx86/Redmond97
 License: GPL-3.0+/MIT
 
 [obs-repo]: https://software.opensuse.org//download.html?project=home%3Abgstack15%3AChicago95&package=chicago95-theme-all
+
 ----
 ### Notice
-
 ### Microsoft® Windows™ is a trademark of Microsoft® Corporation. This name is mentioned solely for reference purposes and is not intended to infringe upon Microsoft's copyrights. © 2024 Microsoft. All rights reserved. All resources from Microsoft Corporation are the property of Microsoft Corporation.
