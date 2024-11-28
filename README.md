@@ -19,9 +19,10 @@ I am considering to make a theme which looks like Windows 2000 since I like the 
 
 - GTK+ 3.22 or 3.24
 - Xfce 4.12, 4.14, 4.16
-- gtk2-engines-pixbuf (Recommended for GTK2 applications)
-- The xfce4-panel-profiles package
-- A Window compositor (Picom)
+- gtk2-engines-pixbuf (Recommended for GTK2 applications).
+- The xfce4-panel-profiles package.
+- A Window compositor (Picom).
+- Marco window manager for gradient titlebars.
 
 -----
 
@@ -43,6 +44,9 @@ Just put "MENT2K" which is located in /Theme/ in this repo into ~/.themes.
 
 ### Desktop comparison (Picture 1 taken from Windows 2000)
 <img src="Screenshots/Comparison.png" alt="Desktop comp"/>
+
+### Thunar top bar
+<img src="Screenshots/Thunar.png" alt="thunar"/>
 
 ### Screenshots:
 [Click here to view screenshots](Screenshots/SCREENSHOTS.md)
