@@ -49,7 +49,7 @@ Just put "MENT2K" which is located in /Theme/ in this repo into ~/.themes.
 <img src="Screenshots/Thunar.png" alt="thunar"/>
 
 ### The theme in action on a CRT-monitor.
-<img src="Screenshots/CRT.jpg" alt="CRT"/>
+<img src="Screenshots/CRT.JPG" alt="CRT"/>
 
 ### Screenshots:
 [Click here to view screenshots](Screenshots/SCREENSHOTS.md)
