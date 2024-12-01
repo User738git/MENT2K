@@ -35,7 +35,8 @@ I am considering to make a theme which looks like Windows 2000 since I like the 
 ## Installation
 
 Just put "MENT2K" which is located in /Theme/ in this repo into ~/.themes.
-remember to apply the theme and write "xfce4-panel --restart" in the terminal when you are finished rearranging icons on the xfce panel.
+
+Remember to apply the theme and write "xfce4-panel --restart" in the terminal when you are finished rearranging icons on the xfce panel.
 
 ### Install the LibreOffice icon theme from Chicago95:
 [Click here](https://github.com/grassmunk/Chicago95/blob/master/Extras/libreoffice-chicago95-iconset/README.md) for installing the LibreOffice Chicago95 icon theme.
