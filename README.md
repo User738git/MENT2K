@@ -13,8 +13,7 @@ I am making fork of the Chicago95 theme which looks like Windows 2000 since I li
 
 - A look-alike start menu.
 - A bordered system tray.
-- Custom icon theme.
-- Link to SE98 icon theme: [Click here.](https://github.com/nestoris/Win98SE?tab=readme-ov-file)
+- Custom icon theme. (Forked from SE98)
 - etc.
 
 ### Requirements:
@@ -51,6 +50,9 @@ An install script is added, but is currently only for testing purposes. Use at y
 
 ### Desktop comparison (Picture 1 taken from Windows 2000)
 <img src="Screenshots/Comparison.png" alt="Desktop comp"/>
+
+### Start menu
+<img src="Screenshots/Start-menu.png" alt="Start menu">
 
 ### Thunar top bar
 <img src="Screenshots/Thunar.png" alt="thunar"/>
