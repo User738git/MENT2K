@@ -7,7 +7,7 @@
 
 *Click [here](Screenshots/SCREENSHOTS.md) for more screenshots*
 
-I am making fork of the Chicago95 theme which looks like Windows 2000 since I like the interface.
+A fork of the Chicago95 theme which looks like Windows 2000.
 
 ### Included in this theme:
 
