@@ -1,7 +1,7 @@
 ## Screenshots
 
 #### Solitaire (via Wine):
-<img src="Solitare.png" alt="Start menu">
+<img src="Solitaire.png" alt="Solitaire">
 
 #### Login screen
 <img src="Logon.png" alt="Start menu">
