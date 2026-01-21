@@ -1,13 +1,13 @@
 ## Screenshots
 
 #### Solitaire (via Wine):
-<img src="Screenshots/Solitare.png" alt="Start menu">
+<img src="Solitare.png" alt="Start menu">
 
 #### Login screen
-<img src="Screenshots/Logon.png" alt="Start menu">
+<img src="Logon.png" alt="Start menu">
 
 #### Thunar top bar
-<img src="Screenshots/Thunar.png" alt="thunar">
+<img src="Thunar.png" alt="thunar">
 
 #### Start menu
-<img src="Screenshots/Start-menu.png" alt="Start menu">
+<img src="Start-menu.png" alt="Start menu">
