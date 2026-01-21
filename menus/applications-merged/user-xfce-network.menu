@@ -1,0 +1,17 @@
+<!DOCTYPE Menu PUBLIC "-//freedesktop//DTD Menu 1.0//EN"
+    "http://www.freedesktop.org/standards/menu-spec/menu-1.0.dtd">
+<!-- Do not edit manually - generated and managed by xdg-desktop-menu -->
+<Menu>
+    <Name>Applications</Name>
+<Menu>
+    <Name>xfce-network</Name>
+    <Directory>xfce-network.directory</Directory>
+    <Include>
+        <Filename>io.github.ungoogled_software.ungoogled_chromium.desktop</Filename>
+        <Filename>librewolf.desktop</Filename>
+        <Filename>xfce4-web-browser.desktop</Filename>
+        <Filename>thunderbird.desktop</Filename>
+        <Filename>snap-store_snap-store.desktop</Filename>
+    </Include>
+</Menu>
+</Menu>

@@ -1,0 +1,26 @@
+<!DOCTYPE Menu PUBLIC "-//freedesktop//DTD Menu 1.0//EN"
+    "http://www.freedesktop.org/standards/menu-spec/menu-1.0.dtd">
+<!-- Do not edit manually - generated and managed by xdg-desktop-menu -->
+<Menu>
+    <Name>Applications</Name>
+<Menu>
+    <Name>xfce-accessories</Name>
+    <Directory>xfce-accessories.directory</Directory>
+    <Include>
+        <Filename>org.xfce.mousepad.desktop</Filename>
+        <Filename>l3afpad.desktop</Filename>
+        <Filename>librewolf.desktop</Filename>
+        <Filename>io.github.ungoogled_software.ungoogled_chromium.desktop</Filename>
+        <Filename>xfce4-web-browser.desktop</Filename>
+        <Filename>thunderbird.desktop</Filename>
+        <Filename>gimp.desktop</Filename>
+        <Filename>org.xfce.ristretto.desktop</Filename>
+        <Filename>libreoffice-draw.desktop</Filename>
+        <Filename>simple-scan.desktop</Filename>
+        <Filename>org.pulseaudio.pavucontrol.desktop</Filename>
+        <Filename>org.xfce.Parole.desktop</Filename>
+        <Filename>org.gnome.Sudoku.desktop</Filename>
+        <Filename>org.gnome.Sudoku1.desktop</Filename>
+    </Include>
+</Menu>
+</Menu>

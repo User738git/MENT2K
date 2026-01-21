@@ -11,14 +11,15 @@
 
 /* Xfdesktop */
 XfdesktopIconView, XfceDesktop.view, XfdesktopIconView.view {
-  margin-left: 1000px
+  margin-left: 100px
 }
 XfdesktopIconView.view {
   -XfdesktopIconView-ellipsize-icon-labels: 0;
-  -XfdesktopIconView-cell-text-width-proportion: 2.5; 
-  -XfdesktopIconView-cell-padding: -4;
-  -XfdesktopIconView-cell-spacing: -0.2;
+  -XfdesktopIconView-cell-text-width-proportion: 2.5;
+  -XfdesktopIconView-cell-padding: -1.9;
+  -XfdesktopIconView-cell-spacing: -10;
   background: #3d6fa200;
+  margin-left: -10px
 }
   XfdesktopIconView.view:active {
     background-image: -gtk-gradient(linear, left top, right bottom, from (@selected_bg_color));
@@ -39,28 +40,21 @@ Remove code after this comment to disable the fake handle image.
 Since the task bar name changes based on individual panel layout, support
 up to 24 different positions. */
 
-#tasklist > box, #tasklist-1 > box, #tasklist-2 > box, #tasklist-3 > box, 
-#tasklist-4 > box, #tasklist-5 > box, #tasklist-6 > box, #tasklist-7 > box, 
-#tasklist-8 > box, #tasklist-9 > box, #tasklist-10 > box, #tasklist-11 > box, 
-#tasklist-12 > box, #tasklist-13 > box, #tasklist-14 > box, #tasklist-15 > box, 
+#tasklist > box, #tasklist-1 > box, #tasklist-2 > box, #tasklist-3 > box,
+#tasklist-4 > box, #tasklist-5 > box, #tasklist-6 > box, #tasklist-7 > box,
+#tasklist-8 > box, #tasklist-9 > box, #tasklist-10 > box, #tasklist-11 > box,
+#tasklist-12 > box, #tasklist-13 > box, #tasklist-14 > box, #tasklist-15 > box,
 #tasklist-16 > box, #tasklist-17 > box, #tasklist-18 > box, #tasklist-19 > box,
-#tasklist-20 > box, #tasklist-21 > box, #tasklist-22 > box, #tasklist-23 > box, 
+#tasklist-20 > box, #tasklist-21 > box, #tasklist-22 > box, #tasklist-23 > box,
 #tasklist-24 > box, #tasklist-25 > box {
    border-left: 11px solid;
    border-image: url("../assets/handle.png");
    border-image-slice: 2 2 2 11;
+   margin-left: -5px;
    margin-right: -20px;
    padding-right: 20px;
 }
 
-/* Hack to give the first launcher icon a pseudo handle */
-#XfcePanelWindow  widget > widget:nth-child(2) box #launcher-arrow {
-  border-left: 11px solid;
-  border-image: url("assets/handle.png");
-  border-image-slice: 4 4 3 11;
-  margin-top: 3px;
-  margin-bottom: 2;
-}
 
 #XfceLauncherPlugin {
 margin: 90px;
@@ -95,6 +89,10 @@ margin: 90px;
   margin-right: 7px;
 }
 
+widget#launcher-1, widget#launcher-2, widget#launcher-3, widget#launcher-4, widget#launcher-5, widget#launcher-6, widget#launcher-7, widget#launcher-8, widget#launcher-9, widget#launcher-10, widget#launcher-11, widget#launcher-12, widget#launcher-13, widget#launcher-14, widget#launcher-15, widget#launcher-16, widget#launcher-17, widget#launcher-18, widget#launcher-19, widget#launcher-20, widget#launcher-21, widget#launcher-22, widget#launcher-23, widget#launcher-24, widget#launcher-25, widget#launcher-26, widget#launcher-27, widget#launcher-28, widget#launcher-29, widget#launcher-30, widget#launcher-31, widget#launcher-32, widget#launcher-33, widget#launcher-34, widget#launcher-35, widget#launcher-36, widget#launcher-37, widget#launcher-38, widget#launcher-39, widget#launcher-40, widget#launcher-41, widget#launcher-42, widget#launcher-43 {
+  margin-left: -9px;
+  margin-right: 7px;
+}
 
 #xfce4-notification-plugin {
   border: 1px solid #000;
@@ -107,9 +105,10 @@ padding: 20px
 
 /* Hack to give the first launcher icon a pseudo handle */
 #XfcePanelWindow  widget > widget:nth-child(2) box #launcher-arrow {
-   border-left: 11px solid;
-   border-image: url("../assets/handle.png");
-   border-image-slice: 4 4 3 11;
+   border-left: 2px solid;
+   border-image: url("../assets/handle-panel2.png");
+   background: url("../assets/handle-panel-bg.png");
+   background-repeat: no-repeat;
 }
 
 /* XFCE Panel Bar */
@@ -117,7 +116,7 @@ padding: 20px
     box-shadow: none;
     border: 1px solid @border_dark;
     border-image: url("../buttons/taskbord.png");
-    border-image-slice: 1 1 1 1; 
+    border-image-slice: 1 1 1 1;
     background: url("../assets/tasktex2.png") }
 
   .xfce4-panel .vertical .tasklist .toggle label {
@@ -187,7 +186,7 @@ padding: 20px
   margin-top: 1px;
   background-color: @bg_color; }
   #clock-button label {
-    padding: 11px; 
+    padding: 11px;
   }
 /*  Workspace switcher */
 wnck-pager {
@@ -218,12 +217,12 @@ wnck-pager {
   background-color: transparent; }
 /* Tasklist */
 .tasklist .toggle {
-  /* We remove borders and shadows for the '.tasklist' '.toggle' button 
-   * directly so that we can apply margins to the inner toggle button 
-   * box without impacting usability in which the user would otherwise 
+  /* We remove borders and shadows for the '.tasklist' '.toggle' button
+   * directly so that we can apply margins to the inner toggle button
+   * box without impacting usability in which the user would otherwise
    * require pointer precision to interact with the tasklist buttons.
    * NOTE OF REGRESSION: By choosing to apply border and shading effects
-   * to the inner tasklist toggle button box, this will introduce a 
+   * to the inner tasklist toggle button box, this will introduce a
    * regression in the "show flat buttons" feature presented by the XFCE
    * Window Buttons plugin configuration setting.*/
   border: none;
@@ -285,7 +284,7 @@ wnck-pager {
     -gtk-icon-style: regular;
     -gtk-icon-transform: scale(); }
 
-#systray-1, #systray-2 > box, #systray-3 > box, #systray-4 > box, #systray-5 > box, #systray-6 > box, #systray-7 > box,
+#systray-1, #systray-1 > box, #systray-2 > box, #systray-3 > box, #systray-4 > box, #systray-5 > box, #systray-6 > box, #systray-7 > box,
 #systray-8 > box, #systray-9 > box, #systray-10 > box, #systray-11 > box, #systray-12 > box, #systray-13 > box, #systray-14 >box,
 #systray-15 > box, #systray-16 > box, #systray-17 > box, #systray-18 > box, #systray-19 > box, #systray-20 > box, #systray-21 >box {
   box-shadow: inset 0px 4px @border_shade, inset 0px -4px @border_bright, inset 0px 3px @bg_color, inset -0px -3px @bg_color, inset 0px 1px @border_bright;
@@ -328,6 +327,10 @@ wnck-pager {
 .xfce4-panel #pulseaudio-button * {
   -gtk-icon-transform: scale(1); }
 
+widget#applicationsmenu-2 button box label{
+  padding-top: 2px
+}
+
 /* XFCE terminal */
 #xfce4-terminal-notebook overlay > box,
 #xfce4-terminal-notebook stack > box,
@@ -369,3 +372,46 @@ wnck-pager {
   border-bottom: 1px solid @border_dark;
   border-right: 1px solid @border_dark;
   box-shadow: inset -1px -1px @border_shade, inset 1px 1px @border_light; }
+
+  .xfce4-popup-applications-menu {
+    background-color: #2e3436;
+    color: #d3d7cf;
+  }
+
+  .xfce4-popup-applications-menu .menuitem {
+    padding: 10px;
+    font-size: 14px;
+  }
+
+  .xfce4-popup-applications-menu .menuitem:hover {
+    background-color: #3c4043;
+  }
+
+  /* Custom styles for the application menu button */
+  .applicationmenu-button, .applicationmenu, #applicationmenu, #applicationsmenu, #applicationsmenu-2, #WindowMenuPlugin, .WindowMenuPlugin {
+    background-color: #2e3436;
+    color: #d3d7cf;
+    border: none;
+    padding: 100px;
+  }
+
+  .applicationmenu-button:hover {
+    background-color: #3c4043;
+  }
+
+  /* Custom styles for the image inside the button */
+  .applicationmenu-button image {
+    padding: 5px;
+  }
+
+  /* Custom styles for the label inside the button */
+  .applicationmenu-button label {
+    font-size: 14px;
+    color: #d3d7cf;
+  }
+
+  /* Custom styles for the box inside the button */
+  .applicationmenu-button box {
+    padding: 5px;
+  }
+

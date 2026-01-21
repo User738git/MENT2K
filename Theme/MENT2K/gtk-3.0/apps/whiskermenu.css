@@ -173,3 +173,22 @@ whiskermenu-window {
     box-shadow: none; }
   #whiskermenu-window frame, #whiskermenu-window GtkListBox, #whiskermenu-window scrolledwindow, #whiskermenu-window viewport {
     background-color: transparent; }
+
+ #whiskermenu-window scrollbar.vertical {
+      margin: 0px;
+      padding: 0px;
+      min-width: 0px;
+      min-height: 0px;
+      border: none;
+      box-shadow: none; }
+
+
+    #whiskermenu-window .search-area {
+      margin: -10px;
+      min-height: 0px;
+
+    }
+
+    #whiskermenu-window grid {
+      margin-bottom: -6px
+    }

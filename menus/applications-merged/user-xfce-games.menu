@@ -1,0 +1,18 @@
+<!DOCTYPE Menu PUBLIC "-//freedesktop//DTD Menu 1.0//EN"
+    "http://www.freedesktop.org/standards/menu-spec/menu-1.0.dtd">
+<!-- Do not edit manually - generated and managed by xdg-desktop-menu -->
+<Menu>
+    <Name>Applications</Name>
+<Menu>
+    <Name>xfce-games</Name>
+    <Directory>xfce-games.directory</Directory>
+    <Include>
+        <Filename>menulibre-new-launcher.desktop</Filename>
+        <Filename>xfce4-session-logout.desktop</Filename>
+        <Filename>org.gnome.Mines.desktop</Filename>
+        <Filename>org.bluesabre.SgtLauncher.desktop</Filename>
+        <Filename>org.gnome.Sudoku.desktop</Filename>
+        <Filename>menulibre-shut-down...desktop</Filename>
+    </Include>
+</Menu>
+</Menu>
