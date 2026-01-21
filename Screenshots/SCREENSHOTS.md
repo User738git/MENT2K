@@ -1,4 +1,4 @@
 ## Screenshots
 
-#### Current desktop:
-![alt text](MENT2K-screenshot "desktop")
+#### Solitaire (via WIne):
+<img scr="Screenshots/Solitaire.png">
