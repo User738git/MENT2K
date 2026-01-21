@@ -7,19 +7,20 @@
 
 *Click [here](Screenshots/SCREENSHOTS.md) for more screenshots*
 
-I am considering to make a theme which looks like Windows 2000 since I like the interface.
+I am making fork of the Chicago95 theme which looks like Windows 2000 since I like the interface.
 
-### Included in this theme + future inclusions:
+### Included in this theme:
 
-- Not much yet...
+- A look-alike start menu.
 - A bordered system tray.
-- Considering to add a modified SE98 icon theme.
+- Custom icon theme.
 - Link to SE98 icon theme: [Click here.](https://github.com/nestoris/Win98SE?tab=readme-ov-file)
+- etc.
 
 ### Requirements:
 
-- GTK+ 3.22 or 3.24
-- Xfce 4.12, 4.14, 4.16
+- GTK3+
+- Xfce 4.12 - 4.21.
 - gtk2-engines-pixbuf (Recommended for GTK2 applications).
 - The xfce4-panel-profiles package.
 - A Window compositor (Picom).
