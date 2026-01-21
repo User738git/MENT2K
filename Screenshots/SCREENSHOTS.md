@@ -1,4 +1,4 @@
 ## Screenshots
 
-#### Solitaire (via WIne):
+#### Solitaire (via Wine):
 <img scr="Screenshots/Solitaire.png"/>
