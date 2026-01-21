@@ -1,5 +1,3 @@
-#!/bin/bash
-
 # Function to create a directory if it does not exist:
 create_dir_if_not_exists() {
     if [ ! -d "$1" ]; then
@@ -15,9 +13,9 @@ create_dir_if_not_exists "$HOME/.local/share/xfce4-panel-profiles"
 create_dir_if_not_exists "$HOME/.config/menus/menu-backup"
 
 cp -r Theme/MENT2K "$HOME/.themes/"
-cp -r Theme/MENT2K "/usr/share/themes/"
+sudo cp -r Theme/MENT2K "/usr/share/themes/"
 cp -r Icons/Idk2k "$HOME/.icons/"
-cp -r Icons/Idk2k "/usr/share/icons/"
+sudo cp -r Icons/Idk2k "/usr/share/icons/"
 
 sudo apt update
 sudo apt install -y marco mate-tweak gtk2-engines-pixbuf xfce4-panel-profiles picom
@@ -58,5 +56,8 @@ picom --config ~/.config/picom.conf --backend glx --vsync opengl-swc --no-fading
 # Change the xfdesktop wallpaper to just the color "#3D6FA2"
 xfconf-query --channel xfce4-desktop --property /backdrop/screen0/monitor0/workspace0/last-image --set ""
 xfconf-query --channel xfce4-desktop --property /backdrop/screen0/monitor0/workspace0/color --set "#3D6FA2"
+xfconf-query --channel xfce4-desktop --property /desktop-icons/icon-size --set 32
+echo '(gtk_accel_path "<Actions>/ThunarWindow/view-location-selector-entry" "true")' >> ~/.config/Thunar/accels
+
 
 echo "Installation and configuration complete."
