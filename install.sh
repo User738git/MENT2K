@@ -18,7 +18,7 @@ cp -r Icons/Idk2k "$HOME/.icons/"
 sudo cp -r Icons/Idk2k "/usr/share/icons/"
 
 sudo apt update
-sudo apt install -y marco mate-tweak gtk2-engines-pixbuf xfce4-panel-profiles picom
+sudo apt install -y marco mate-control-center mate-tweak gtk2-engines-pixbuf xfce4-panel-profiles picom
 
 cp Misc/Panel-profiles/MENT2K.tar.bz2 "$HOME/.local/share/xfce4-panel-profiles/"
 
@@ -58,7 +58,10 @@ xfconf-query --channel xfce4-desktop --property /backdrop/screen0/monitor0/works
 xfconf-query --channel xfce4-desktop --property /backdrop/screen0/monitor0/workspace0/color --set "#3D6FA2"
 xfconf-query --channel xfce4-desktop --property /desktop-icons/icon-size --set 32
 echo '(gtk_accel_path "<Actions>/ThunarWindow/view-location-selector-entry" "true")' >> ~/.config/Thunar/accels
+xfconf-query --channel xsettings --property /Gtk/FontName --set "Tahoma 8"
 
 xfce4-panel -r
+
+marco --replace
 
 echo "Installation and configuration complete."
