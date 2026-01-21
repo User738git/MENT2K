@@ -59,5 +59,6 @@ xfconf-query --channel xfce4-desktop --property /backdrop/screen0/monitor0/works
 xfconf-query --channel xfce4-desktop --property /desktop-icons/icon-size --set 32
 echo '(gtk_accel_path "<Actions>/ThunarWindow/view-location-selector-entry" "true")' >> ~/.config/Thunar/accels
 
+xfce4-panel -r
 
 echo "Installation and configuration complete."
