@@ -82,6 +82,8 @@ An install script is added, but is currently only for testing purposes. Use at y
 Chicago95: https://github.com/grassmunk/chicago95
 
 Redmond97: https://github.com/matthewmx86/Redmond97
+
+SE98: https://github.com/nestoris/Win98SE
 ### Code and license
 License: GPL-3.0+/MIT
 
