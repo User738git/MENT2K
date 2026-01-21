@@ -1,0 +1,10 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=My Documents
+Comment=
+Exec=thunar /home/student/
+Icon=user-home
+Path=
+Terminal=false
+StartupNotify=false

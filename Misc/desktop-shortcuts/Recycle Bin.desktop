@@ -1,0 +1,10 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=Recycle Bin
+Comment=
+Exec=thunar trash:///
+Icon=user-trash-full_win2k
+Path=
+Terminal=false
+StartupNotify=false

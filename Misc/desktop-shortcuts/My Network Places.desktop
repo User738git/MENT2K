@@ -1,0 +1,10 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=My Network Places
+Comment=
+Exec=thunar network:///
+Icon=network-workgroup_win2k
+Path=
+Terminal=false
+StartupNotify=false
