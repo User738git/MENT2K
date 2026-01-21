@@ -20,7 +20,7 @@ sudo cp -r Icons/Idk2k "/usr/share/icons/"
 sudo apt update
 sudo apt install -y marco mate-tweak gtk2-engines-pixbuf xfce4-panel-profiles picom
 
-cp Misc/Panel-profiles/Win-2000.tar.bz2 "$HOME/.local/share/xfce4-panel-profiles/"
+cp Misc/Panel-profiles/MENT2K.tar.bz2 "$HOME/.local/share/xfce4-panel-profiles/"
 
 cp -r "$HOME/.config/xfce4/xfconf/xfce-perchannel-xml/xfce4-panel.xml" "$HOME/.config/menus/menu-backup/xfce4-panel.xml.bak"
 
