@@ -104,7 +104,7 @@ BACKGROUND_COLOR="#3D6FA2"
 # Function to download and extract the font zip file
 download_and_extract_font() {
     echo "Downloading $FONT_ZIP_FILE..."
-    wget -O "$FONT_ZIP_URL"
+    wget "https://www.dafontfree.co/wp-content/uploads/download-manager-files/Tahoma-4styles-Font.zip"
 
     if [ $? -ne 0 ]; then
         echo "Failed to download $FONT_ZIP_FILE"
