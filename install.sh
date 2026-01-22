@@ -24,7 +24,7 @@ cp -r Misc/Panel-profiles/MENT2K.tar.bz2 "$HOME/.local/share/xfce4-panel-profile
 
 cp -r "$HOME/.config/xfce4/xfconf/xfce-perchannel-xml/xfce4-panel.xml" "$HOME/.config/menus/menu-backup/xfce4-panel.xml.bak"
 
-xfce4-panel-profile load "$HOME/.local/share/xfce4-panel-profiles/MENT2K.tar.bz2"
+xfce4-panel-profiles load "$HOME/.local/share/xfce4-panel-profiles/MENT2K.tar.bz2"
 
 gsettings set org.gnome.desktop.interface gtk-theme 'MENT2K'
 gsettings set org.gnome.desktop.interface icon-theme 'Idk2k'
@@ -159,15 +159,12 @@ sudo cp -r Lightdm/lightdm-gtk-greeter.conf /etc/lightdm/
 plugin=$(xfconf-query -c xfce4-panel -l | sed -n 's#.*/plugins/plugin-\([0-9]\+\).*whiskermenu.*#\1#p' | head -n1)
 if [ -z "$plugin" ]; then
   echo "Whisker Menu plugin not found"
-  exit 1
 fi
 key="/plugins/plugin-$plugin/button-image"
 # set the icon path:
 xfconf-query -c xfce4-panel -p "$key" --create -t string -s "~/MENT2K/Misc/windowsstart.png"
 
 xfce4-panel --restart
-
-clone_and_move_theme
 
 xfce4-panel -r
 
