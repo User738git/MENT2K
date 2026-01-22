@@ -89,46 +89,35 @@ xfconf-query --channel xsettings --property /Gtk/FontName --set "Tahoma 8"
 
 #!/bin/bash
 
-# Define variables
-FONT_ZIP_URL="https://www.dafontfree.co/wp-content/uploads/download-manager-files/Tahoma-4styles-Font.zip"
 FONT_ZIP_FILE="Tahoma-4styles-Font.zip"
 EXTRACTED_FOLDER="Tahoma-4styles-Font"
 PROJECT_FOLDER="$(pwd)"
-FONT_FILES=("TAHOMA_0.TTF" "TAHOMAB0.TTF" "TAHOMABD.TTF" "Tahoma Regular font.ttf")
-LIGHTDM_CONF="/etc/lightdm/lightdm-gtk-greeter.conf"
-LIGHTDM_CONF_BACKUP="${LIGHTDM_CONF}.bak"
-THEME="MENT2K"
-ICON_THEME="Idk2k"
-BACKGROUND_COLOR="#3D6FA2"
+SYSTEM_FONT_DIR="/usr/local/share/fonts/tahoma"
 
-# Function to download and extract the font zip file
 download_and_extract_font() {
-    echo "Downloading $FONT_ZIP_FILE..."
-    wget "https://www.dafontfree.co/wp-content/uploads/download-manager-files/Tahoma-4styles-Font.zip"
-
-    if [ $? -ne 0 ]; then
-        echo "Failed to download $FONT_ZIP_FILE"
-        exit 1
-    fi
-
-    echo "Extracting $FONT_ZIP_FILE..."
-    unzip -o "$FONT_ZIP_FILE" -d "$PROJECT_FOLDER"
-
-    if [ $? -ne 0 ]; then
-        echo "Failed to extract $FONT_ZIP_FILE"
-        exit 1
-    fi
+  echo "Downloading $FONT_ZIP_FILE..."
+  wget "https://www.dafontfree.co/wp-content/uploads/download-manager-files/Tahoma-4styles-Font.zip"
+  unzip -o "$FONT_ZIP_FILE" -d "$PROJECT_FOLDER/$EXTRACTED_FOLDER"
 }
 
-# Function to install font files system-wide
 install_fonts() {
-    echo "Installing font files system-wide..."
-    for font in "${FONT_FILES[@]}"; do
-        sudo cp "$PROJECT_FOLDER/$EXTRACTED_FOLDER/$font" /usr/share/fonts/truetype/
-    done
+  sudo mkdir -p "$SYSTEM_FONT_DIR"
+  sudo chmod 755 "$SYSTEM_FONT_DIR"
 
-    sudo fc-cache -fv
+  found=0
+  while IFS= read -r -d '' font; do
+    sudo cp -v "$font" "$SYSTEM_FONT_DIR/"
+    found=1
+  done < <(find "$PROJECT_FOLDER/$EXTRACTED_FOLDER" -type f \( -iname '*.ttf' -o -iname '*.otf' \) -print0)
+
+  if [ "$found" -eq 0 ]; then
+    echo "No font files found in $PROJECT_FOLDER/$EXTRACTED_FOLDER" >&2
+    exit 1
+  fi
+
+  sudo fc-cache -f -v
 }
+
 
 # Function to set Tahoma as the default font with specified settings
 set_default_font() {
@@ -169,12 +158,19 @@ apply_lightdm_theme() {
 # Main script execution
 
 # Main script execution
-read -p "Do you want to download and install the Tahoma font from https://www.dafontfree.co/download/tahoma/? (y/n): " confirm
-if [ "$confirm" == "y" ] || [ "$confirm" == "Y" ]; then
+printf 'Do you want to download and install the Tahoma font from https://www.dafontfree.co/download/tahoma/? (y/n): '
+read -r confirm
+case "$confirm" in
+  y|Y)
     download_and_extract_font
     install_fonts
     set_default_font
-fi
+    echo "Done. To use Tahoma in Xubuntu, set it in Settings → Appearance → Fonts."
+    ;;
+  *)
+    echo "Aborted."
+    ;;
+esac
 
 apply_lightdm_theme
 
