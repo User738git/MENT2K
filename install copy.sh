@@ -20,11 +20,11 @@ sudo cp -r Icons/Idk2k "/usr/share/icons/"
 sudo apt update
 sudo apt install -y marco mate-control-center mate-tweak gtk2-engines-pixbuf xfce4-panel-profiles picom
 
-cp -r Misc/Panel-profiles/MENT2K.tar.bz2 "$HOME/.local/share/xfce4-panel-profiles/"
+cp Misc/Panel-profiles/MENT2K.tar.bz2 "$HOME/.local/share/xfce4-panel-profiles/"
 
 cp -r "$HOME/.config/xfce4/xfconf/xfce-perchannel-xml/xfce4-panel.xml" "$HOME/.config/menus/menu-backup/xfce4-panel.xml.bak"
 
-xfce4-panel-profile load "$HOME/.local/share/xfce4-panel-profiles/MENT2K.tar.bz2"
+xfce4-panel-profile load "$HOME/.local/share/xfce4-panel-profiles/Win-2000.tar.bz2"
 
 gsettings set org.gnome.desktop.interface gtk-theme 'MENT2K'
 gsettings set org.gnome.desktop.interface icon-theme 'Idk2k'
@@ -38,11 +38,16 @@ create_dir_if_not_exists "$HOME/.config/menus/menu-backup"
 mv "$HOME/.config/menus/applications-merged" "$HOME/.config/menus/menu-backup/"
 mv "$HOME/.config/menus/xfce-applications.menu" "$HOME/.config/menus/menu-backup/"
 
-sudo cp -r Misc/menus/* "$HOME/.config/menus/"
+cp -r Misc/menus/* "$HOME/.config/menus/"
 
-cp -r Misc/desktop-shortcuts/ "$HOME/Desktop"
+cp -r Misc/desktop-shortcuts/ "$HOME/Desktop/"
 # Make marco the default window manager
 update-alternatives --set x-session-manager /usr/bin/marco
+
+# Move Misc/Redmond97 to ~/.themes
+
+# Main script execution
+change_whisker_menu_icon
 
 echo "Cloning Redmond97 repository..."
 git clone https://github.com/matthewmx86/Redmond97.git
@@ -52,12 +57,12 @@ if [ $? -ne 0 ]; then
     exit 1
 fi
 
-echo "Moving marco theme to ~/.themes..."
+echo "Moving theme to ~/.themes..."
+mkdir -p ~/.themes
 sudo cp -r "Redmond97/Theme/no-csd/Redmond97 Millennium" ~/.themes
 
 if [ $? -ne 0 ]; then
     echo "Failed to move the theme."
-    exit 1
 fi
 
 echo "Deleting cloned Redmond97 directory..."
@@ -68,8 +73,13 @@ if [ $? -ne 0 ]; then
     exit 1
 fi
 
+cp -r Misc/Redmond97 "$HOME/.themes/"
+
 # Apply Redmond97 as the marco window manager theme
 gsettings set org.mate.Marco.general theme 'Redmond97 Millennium'
+
+# Set picom as compositor without window shadows
+picom --config ~/.config/picom.conf --backend glx --vsync opengl-swc --no-fading-shadow --no-dock-shadow --no-shadow
 
 # Change the xfdesktop wallpaper to just the color "#3D6FA2"
 xfconf-query --channel xfce4-desktop --property /backdrop/screen0/monitor0/workspace0/last-image --set ""
@@ -78,11 +88,20 @@ xfconf-query --channel xfce4-desktop --property /desktop-icons/icon-size --set 3
 echo '(gtk_accel_path "<Actions>/ThunarWindow/view-location-selector-entry" "true")' >> ~/.config/Thunar/accels
 xfconf-query --channel xsettings --property /Gtk/FontName --set "Tahoma 8"
 
+
+#!/bin/bash
+
+# Define variables
+FONT_ZIP_URL="https://www.dafontfree.co/wp-content/uploads/download-manager-files/Tahoma-4styles-Font.zip"
 FONT_ZIP_FILE="Tahoma-4styles-Font.zip"
 EXTRACTED_FOLDER="Tahoma-4styles-Font"
 PROJECT_FOLDER="$(pwd)"
-FONT_FILES="TAHOMA_0.TTF" "TAHOMAB0.TTF" "TAHOMABD.TTF" "Tahoma Regular font.ttf"
-SYSTEM_FONT_DIR="/usr/local/share/fonts/tahoma"
+FONT_FILES=("TAHOMA_0.TTF" "TAHOMAB0.TTF" "TAHOMABD.TTF" "Tahoma Regular font.ttf")
+LIGHTDM_CONF="/etc/lightdm/lightdm-gtk-greeter.conf"
+LIGHTDM_CONF_BACKUP="${LIGHTDM_CONF}.bak"
+THEME="MENT2K"
+ICON_THEME="Idk2k"
+BACKGROUND_COLOR="#3D6FA2"
 
 download_and_extract_font() {
   echo "Downloading $FONT_ZIP_FILE..."
@@ -97,7 +116,6 @@ install_fonts() {
     sudo fc-cache -fv
 }
 
-
 # Function to set Tahoma as the default font with specified settings
 set_default_font() {
     echo "Setting Tahoma as the default font with 8pt size, full hinting, Vertical BGR as subpixel order, and no anti-aliasing..."
@@ -105,9 +123,9 @@ set_default_font() {
     # Set default font for Xfce
     xfconf-query --channel xsettings --property /Gtk/FontName --set "Tahoma 8"
     xfconf-query -c xsettings -p /Xft/Antialias -s 0
-    xfconf-query -c xsettings -p /Xft/Hinting -s 1
-    xfconf-query -c xsettings -p /Xft/HintStyle -s hintfull
-    xfconf-query -c xsettings -p /Xft/RGBA -s vgbr
+    xfconf-query --channel xsettings --property /Gtk/Hinting --set "true"
+    xfconf-query --channel xsettings --property /Gtk/SubpixelOrder --set "vbgr"
+    xfconf-query --channel xsettings --property /Gtk/Antialias --set "false"
 
     # Set default font for LightDM greeter
     sudo sed -i 's/^#font-name=.*/font-name=Tahoma 8/' "$LIGHTDM_CONF"
@@ -137,42 +155,71 @@ apply_lightdm_theme() {
 # Main script execution
 
 # Main script execution
-printf 'Do you want to download and install the Tahoma font from https://www.dafontfree.co/download/tahoma/? (y/n): '
-read -r confirm
-case "$confirm" in
-  y|Y)
+read -p "Do you want to download and install the Tahoma font from https://www.dafontfree.co/download/tahoma/? (y/n): " confirm
+if [ "$confirm" == "y" ] || [ "$confirm" == "Y" ]; then
     download_and_extract_font
     install_fonts
     set_default_font
-    echo "Done. To use Tahoma in Xubuntu, set it in Settings → Appearance → Fonts."
-    ;;
-  *)
-    echo "Aborted."
-    ;;
-esac
-
-sudo mv -- /etc/lightdm/lightdm-gtk-greeter.conf /etc/lightdm/lightdm-gtk-greeter.conf.bak
-sudo cp -r Lightdm/lightdm-gtk-greeter.conf /etc/lightdm/
-
-
-# find plugin number for whiskermenu
-plugin=$(xfconf-query -c xfce4-panel -l | sed -n 's#.*/plugins/plugin-\([0-9]\+\).*whiskermenu.*#\1#p' | head -n1)
-if [ -z "$plugin" ]; then
-  echo "Whisker Menu plugin not found"
-  exit 1
 fi
-key="/plugins/plugin-$plugin/button-image"
-# set the icon path:
-xfconf-query -c xfce4-panel -p "$key" --create -t string -s "~/MENT2K/Misc/windowsstart.png"
 
-xfce4-panel --restart
+apply_lightdm_theme
 
+# Function to change the Whisker Menu panel icon
+change_whisker_menu_icon() {
+    echo "Changing Whisker Menu panel icon to Misc/windowsstart.png..."
+
+    # Find the Whisker Menu plugin configuration file
+    WHISKER_MENU_CONF=$(find ~/.config/xfce4/panel -name "whiskermenu-*.rc")
+
+    if [ -z "$WHISKER_MENU_CONF" ]; then
+        echo "Whisker Menu configuration file not found."
+        exit 1
+    fi
+
+    # Backup the original configuration file
+    cp "$WHISKER_MENU_CONF" "${WHISKER_MENU_CONF}.bak"
+
+    # Change the icon property
+    sed -i "s|icon=.*|icon=Misc/windowsstart.png|" "$WHISKER_MENU_CONF"
+
+    echo "Whisker Menu panel icon changed successfully."
+}
+
+# Function to clone the Redmond97 repository and move the theme
+clone_and_move_theme() {
+    echo "Cloning Redmond97 repository..."
+    git clone https://github.com/matthewmx86/Redmond97.git
+
+    if [ $? -ne 0 ]; then
+        echo "Failed to clone the Redmond97 repository."
+        exit 1
+    fi
+
+    echo "Moving theme to ~/.themes..."
+    mkdir -p ~/.themes
+    sudo mv "Redmond97/Theme/no-csd/Redmond97\ Millennium" ~/.themes
+
+    if [ $? -ne 0 ]; then
+        echo "Failed to move the theme."
+        exit 1
+    fi
+
+    echo "Deleting cloned Redmond97 directory..."
+    rm -rf Redmond97
+
+    if [ $? -ne 0 ]; then
+        echo "Failed to delete the cloned Redmond97 directory."
+        exit 1
+    fi
+
+    echo "Theme moved and cloned directory deleted successfully."
+}
+
+# Main script execution
+change_whisker_menu_icon
 clone_and_move_theme
 
 xfce4-panel -r
-
-# Set picom as compositor without window shadows
-picom --backend glx --vsync opengl-swc 
 
 marco --replace
 
