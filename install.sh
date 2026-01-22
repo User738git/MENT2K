@@ -38,9 +38,9 @@ create_dir_if_not_exists "$HOME/.config/menus/menu-backup"
 mv "$HOME/.config/menus/applications-merged" "$HOME/.config/menus/menu-backup/"
 mv "$HOME/.config/menus/xfce-applications.menu" "$HOME/.config/menus/menu-backup/"
 
-cp -r Misc/menus/* "$HOME/.config/menus/"
+sudo cp -r Misc/menus/* "$HOME/.config/menus/"
 
-cp -r Misc/desktop-shortcuts/ "$HOME/Desktop/"
+cp -r Misc/desktop-shortcuts/ "$HOME/Desktop"
 # Make marco the default window manager
 update-alternatives --set x-session-manager /usr/bin/marco
 
@@ -57,9 +57,8 @@ if [ $? -ne 0 ]; then
     exit 1
 fi
 
-echo "Moving theme to ~/.themes..."
-mkdir -p ~/.themes
-mv "Redmond97/Theme/no-csd/Redmond97 Millennium" ~/.themes
+echo "Moving marco theme to ~/.themes..."
+sudo mv "Redmond97/Theme/no-csd/Redmond97 Millennium" ~/.themes
 
 if [ $? -ne 0 ]; then
     echo "Failed to move the theme."
@@ -79,8 +78,6 @@ cp -r Misc/Redmond97 "$HOME/.themes/"
 # Apply Redmond97 as the marco window manager theme
 gsettings set org.mate.Marco.general theme 'Redmond97 Millennium'
 
-# Set picom as compositor without window shadows
-picom --config ~/.config/picom.conf --backend glx --vsync opengl-swc --no-fading-shadow --no-dock-shadow --no-shadow
 
 # Change the xfdesktop wallpaper to just the color "#3D6FA2"
 xfconf-query --channel xfce4-desktop --property /backdrop/screen0/monitor0/workspace0/last-image --set ""
@@ -107,7 +104,7 @@ BACKGROUND_COLOR="#3D6FA2"
 # Function to download and extract the font zip file
 download_and_extract_font() {
     echo "Downloading $FONT_ZIP_FILE..."
-    wget -O "$FONT_ZIP_FILE" "$FONT_ZIP_URL"
+    wget -O "$FONT_ZIP_URL"
 
     if [ $? -ne 0 ]; then
         echo "Failed to download $FONT_ZIP_FILE"
@@ -214,7 +211,7 @@ clone_and_move_theme() {
 
     echo "Moving theme to ~/.themes..."
     mkdir -p ~/.themes
-    mv "Redmond97/Theme/no-csd/Redmond97\ Millennium" ~/.themes
+    sudo mv "Redmond97/Theme/no-csd/Redmond97\ Millennium" ~/.themes
 
     if [ $? -ne 0 ]; then
         echo "Failed to move the theme."
@@ -236,8 +233,10 @@ clone_and_move_theme() {
 change_whisker_menu_icon
 clone_and_move_theme
 
-
 xfce4-panel -r
+
+# Set picom as compositor without window shadows
+picom --backend glx --vsync opengl-swc 
 
 marco --replace
 
