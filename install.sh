@@ -89,9 +89,6 @@ xfconf-query --channel xfce4-desktop --property /desktop-icons/icon-size --set 3
 echo '(gtk_accel_path "<Actions>/ThunarWindow/view-location-selector-entry" "true")' >> ~/.config/Thunar/accels
 xfconf-query --channel xsettings --property /Gtk/FontName --set "Tahoma 8"
 
-xfce4-panel -r
-
-marco --replace
 
 #!/bin/bash
 
@@ -238,5 +235,10 @@ clone_and_move_theme() {
 # Main script execution
 change_whisker_menu_icon
 clone_and_move_theme
+
+
+xfce4-panel -r
+
+marco --replace
 
 echo "Installation and configuration complete."
