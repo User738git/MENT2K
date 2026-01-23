@@ -35,12 +35,11 @@ A fork of the Chicago95 theme which looks like Windows 2000.
 
 ## Installation
 
-Just put "MENT2K" which is located in /Theme/ in this repo into ~/.themes.
-And put "Idk2k" which is located in /Icons/ in this repo into ~/.icons.
+Go into the project folder and right click on an empty space.
 
-Remember to apply the themes and write "xfce4-panel --restart" in the terminal when you are finished rearranging icons on the xfce panel.
+Click on "Open Terminal Here" and write this into the terminal that pops up:
 
-An install script is added, but is currently only for testing purposes. Use at your own risk!
+`sh install.sh`
 
 ### Install the LibreOffice icon theme from Chicago95:
 [Click here](https://github.com/grassmunk/Chicago95/blob/master/Extras/libreoffice-chicago95-iconset/README.md) for installing the LibreOffice Chicago95 icon theme.
