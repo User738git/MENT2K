@@ -182,9 +182,11 @@ sudo cp -r Lightdm/lightdm-gtk-greeter.conf /etc/lightdm/
 
 # Whisker menu icon replacement:
 
-sudo cp -r ~/MENT2K/Misc/windowsstart.png /etc/
+sudo cp -r ~/MENT2K/Misc/windowsstart2.png /etc/
 
 xfconf-query -c xfce4-panel -p /plugins/plugin-5/button-title --create -t string -s "Start"
+
+xfconf-query -c xfce4-panel -p /plugins/plugin-5/button-icon --create -t string -s "/etc/windowsstart2.png"
 
 xfce4-panel -r
 
