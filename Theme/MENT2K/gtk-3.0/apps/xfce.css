@@ -274,7 +274,8 @@ wnck-pager {
   box-shadow: inset 1px 4px @border_shade, inset 0px -4px @border_bright, inset 0px 3px @bg_color, inset -0px -3px @bg_color, inset 0px 1px @border_bright;
    margin-top: 0px;
    margin-bottom: -2px;
-   margin-right: -7px;
+   margin-right: -9px;
+   margin-left: -1px;
    padding-top: 2px;
    border: none;
    border-bottom: 1px solid @bg_color;
@@ -318,7 +319,8 @@ wnck-pager {
   {
     box-shadow: inset 0px 4px @border_shade, inset 0px -4px @border_bright, inset 0px 3px @bg_color, inset -0px -3px @bg_color, inset 0px 1px @border_bright;
      padding-top: 0;
-     padding-left: 2px;
+     padding-left: 0px;
+     padding-right: -3px;
      border-bottom: 1px solid @bg_color;
      padding-bottom: 0px;
      border-left:  solid -1px @bg_color;

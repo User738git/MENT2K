@@ -124,9 +124,9 @@ xfconf-query --channel xfce4-desktop --list | grep last-image | xargs xfconf-que
 xfconf-query -c xfce4-desktop -p /backdrop/screen0/monitorHDMI-1/workspace0/rgba --create -t double -s 0.239216 -s 0.435294 -s 0.635294 -s 1.0
 xfconf-query -c xfce4-desktop -p /backdrop/screen0/monitoreDP-1/workspace0/rgba --create -t double -s 0.239216 -s 0.435294 -s 0.635294 -s 1.0
 xfconf-query -c xfce4-desktop -p /backdrop/screen0/monitor0/workspace0/rgba --create -t double -s 0.239216 -s 0.435294 -s 0.635294 -s 1.0
-xfconf-query -c xfce4-desktop -p /backdrop/screen0/monitorHDMI-1/workspace0/image-style -s 0
-xfconf-query -c xfce4-desktop -p /backdrop/screen0/monitoreDP-1/workspace0/image-style -s 0
-xfconf-query -c xfce4-desktop -p /backdrop/screen0/monitor0/workspace0/image-style -s 0
+xfconf-query -c xfce4-desktop -p /backdrop/screen0/monitorHDMI-1/workspace0/image-style -s 2
+xfconf-query -c xfce4-desktop -p /backdrop/screen0/monitoreDP-1/workspace0/image-style -s 2
+xfconf-query -c xfce4-desktop -p /backdrop/screen0/monitor0/workspace0/image-style -s 2
 xfconf-query --channel xfce4-desktop --property /desktop-icons/icon-size --set 32
 echo '(gtk_accel_path "<Actions>/ThunarWindow/view-location-selector-entry" "true")' >> ~/.config/Thunar/accels
 xfconf-query --channel xsettings --property /Gtk/FontName --set "Tahoma 8"
