@@ -57,7 +57,7 @@ Write this into the terminal:
 
 If you prefer to install MENT2K manually, manual instructions will be added soon to INSTALL.md.
 
-### Changed your mind?
+> ### Changed your mind?
 
 An uninstall script will be added when I get time.
 
