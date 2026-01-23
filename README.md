@@ -40,6 +40,9 @@ Go into the project folder and right click on an empty space.
 Click on "Open Terminal Here" and write this into the terminal that pops up:
 
 `sh install.sh`
+*Notice: The install-script is an early WP. I (The maintainer of MENT2K) won't take any responbility for broken systems.*
+
+If you prefer to install MENT2K manually, manual instructions will be added soon to INSTALL.md.
 
 ### Install the LibreOffice icon theme from Chicago95:
 [Click here](https://github.com/grassmunk/Chicago95/blob/master/Extras/libreoffice-chicago95-iconset/README.md) for installing the LibreOffice Chicago95 icon theme.
