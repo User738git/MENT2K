@@ -26,7 +26,12 @@ cp -r Misc/Panel-profiles/MENT2K.tar.bz2 "$HOME/.local/share/xfce4-panel-profile
 
 cp -r "$HOME/.config/xfce4/xfconf/xfce-perchannel-xml/xfce4-panel.xml" "$HOME/.config/menus/menu-backup/xfce4-panel.xml.bak"
 
-xfce4-panel-profiles load "$HOME/.local/share/xfce4-panel-profiles/MENT2K.tar.bz2"
+cp -v Misc/xfce-games.directory ~/.local/share/desktop-directories/xfce-games.directory
+cp -v Misc/xfce-office.directory ~/.local/share/desktop-directories/xfce-office.directory
+cp -v Misc/xfce-settings.directory ~/.local/share/desktop-directories/xfce-settings.directory
+cp -v Misc/xfce-accessories.directory ~/.local/share/desktop-directories/xfce-accessories.directory
+
+xfce4-panel-profiles load "$HOME/.local/share/xfce4-panel-profiles/MENT2K.tar.bz2"xfce-office.directory
 s
 gsettings set org.gnome.desktop.interface gtk-theme 'MENT2K'
 gsettings set org.gnome.desktop.interface icon-theme 'Idk2k'
@@ -88,14 +93,14 @@ fi
 
 cp -r Misc/picom.conf ~/.config/
 
-cp -r Misc/.startup ~/
+cp -r Misc/.startup/.startup-marco.sh /etc/
 
 mkdir -p ~/.config/autostart
 cat > ~/.config/autostart/startup-marco.desktop <<'EOF'
 [Desktop Entry]
 Type=Application
 Name=startup-marco
-Exec=~/.startup/.startup-marco.sh
+Exec=~/etc/.startup-marco.sh
 X-GNOME-Autostart-enabled=true
 NoDisplay=false
 EOF
@@ -114,8 +119,10 @@ xfconf-query --channel xfce4-desktop --property /backdrop/screen0/monitoreDP-1/w
 xfconf-query --channel xfce4-desktop --property /backdrop/screen0/monitoreDP-1/workspace0/rgba -s [ 0.239216, 0.435294, 0.635294, 1.000000 ]
 xfconf-query -c xfce4-desktop -p /backdrop/screen0/monitorHDMI-1/workspace0/rgba --create -t double -s 0.239216 -s 0.435294 -s 0.635294 -s 1.0
 xfconf-query -c xfce4-desktop -p /backdrop/screen0/monitoreDP-1/workspace0/rgba --create -t double -s 0.239216 -s 0.435294 -s 0.635294 -s 1.0
+xfconf-query -c xfce4-desktop -p /backdrop/screen0/monitor0/workspace0/rgba --create -t double -s 0.239216 -s 0.435294 -s 0.635294 -s 1.0
 xfconf-query -c xfce4-desktop -p /backdrop/screen0/monitorHDMI-1/workspace0/image-style -s 0
 xfconf-query -c xfce4-desktop -p /backdrop/screen0/monitoreDP-1/workspace0/image-style -s 0
+xfconf-query -c xfce4-desktop -p /backdrop/screen0/monitor0/workspace0/image-style -s 0
 xfconf-query --channel xfce4-desktop --property /desktop-icons/icon-size --set 32
 echo '(gtk_accel_path "<Actions>/ThunarWindow/view-location-selector-entry" "true")' >> ~/.config/Thunar/accels
 xfconf-query --channel xsettings --property /Gtk/FontName --set "Tahoma 8"
@@ -175,15 +182,13 @@ sudo cp -r Lightdm/lightdm-gtk-greeter.conf /etc/lightdm/
 
 # Whisker menu icon replacement:
 
-if [[ ! -r "$HOME/MENT2K/Misc/windowsstart.png" ]]; then
-  echo "icon missing"
-fi
+sudo cp -r ~/MENT2K/Misc/windowsstart.png /etc/
 
-if xfconf-query -c xfce4-panel -p /plugins/plugin-5/button-image >/dev/null 2>&1; then
-  xfconf-query -c xfce4-panel -p /plugins/plugin-5/button-image -s "$HOME/MENT2K/Misc/windowsstart.png"
-else
-  xfconf-query -c xfce4-panel -p /plugins/plugin-5/button-image --create -t string -s "$HOME/MENT2K/Misc/windowsstart.png"
-fi
+xfconf-query -c xfce4-panel -p /plugins/plugin-5/button-image -s "/etc/windowsstart.png"
+
+
+xfconf-query -c xfce4-panel -p /plugins/plugin-5/button-image --create -t string -s "/etc/windowsstart.png"
+
 
 xfce4-panel -r
 

@@ -1,0 +1,7 @@
+[Desktop Entry]
+Version=1.1
+Type=Directory
+Exec=xfce4-session-logout
+Name=Shut Down...
+Comment=Shut down your computer.
+Icon=system-shut-down
