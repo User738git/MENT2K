@@ -184,7 +184,7 @@ sudo cp -r Lightdm/lightdm-gtk-greeter.conf /etc/lightdm/
 
 sudo cp -r ~/MENT2K/Misc/windowsstart.png /etc/
 
-
+xfconf-query -c xfce4-panel -p /plugins/plugin-5/button-title --create -t string -s "Start"
 
 xfce4-panel -r
 
