@@ -1,0 +1,113 @@
+/******************************************
+ * lightdm-gtk-greeter / XFCE screensaver *
+ ******************************************/
+
+/*
+   Contributor notes:
+   Please use two space indentions.
+   Stack all related and child selectors and selector states into a logical hierarchy to a readable degree.
+   Make sure that all changes made here are part of the screensaver.
+*/
+
+/* panel */
+#panel_window {
+  -gtk-icon-style: regular; 
+  color: transparent;
+  font-weight: bold;
+  border: none;
+  background: transparent;}
+  #panel_window .menubar,
+  #panel_window .menubar > .menuitem {
+    background-color: transparent;
+    color: @font_color; }
+    #panel_window .menubar > .menuitem:hover {
+      border-style: none;
+      background-color: @selected_bg_color;
+      color: @font_bright; }
+    #panel_window .menubar > .menuitem *:hover {
+      border-style: none;
+      background-color: @selected_bg_color;
+      color: @font_bright; }
+    #panel_window .menubar > .menuitem:disabled {
+      color: @disabled_font;
+      text-shadow: 1px 1px 0 @disabled_font_shadow; }
+  #panel_window .menubar .menu .menuitem {
+    font-weight: normal;
+    text-shadow: none; }
+
+/****************
+ * login window *
+ ****************/
+#content_frame {
+  border: 1px solid;
+  color: @button_text_color;
+  font-size: 74%;
+  font-family: Tahoma;
+  outline-color: @outline_color;
+  border-top: 100px solid;
+  border-image: url("../assets/branding-main.png");
+  border-image-slice: 0 0 0 0;
+  border-right: 58px solid;
+  border-right-color: @border_dark;
+  border-left-color: @border_bright;
+  border-bottom: none;
+  background-color: transparent;
+  margin-left: 56px;
+  margin-top: -12px
+}
+
+#content_frame input[type="password"],
+#content_frame input[type="text"] {
+  background-color: rgba(0, 0, 0, 0);
+  border: none;
+  color: @button_text_color;
+  font-size: 9pt;
+}
+
+#login_window {
+  border: 1px solid;
+  color: #fff;
+  outline-color: @outline_color;
+  border-top: none;
+  border-right-color: @border_dark;
+  border-left-color: @border_bright;
+  border-bottom: none;
+  background-color: transparent;
+  box-shadow: inset -1px -2px @border_shade, inset 0px 0px @border_light, inset 0px -1px black;
+  background: url("../assets/branding-login-main.png");
+  background-repeat: no-repeat;
+  margin-bottom: -100px
+}
+
+#user_image {
+  padding:0px}
+
+#user_image_border {
+padding: 0px;
+background-color: transparent;
+color: azure;
+}
+
+#buttonbox_frame {
+  padding-top: 0px;
+  padding-bottom: 0;
+  border-style: none;
+  background-color: transparent;
+  background-image: none;
+  box-shadow: none; }
+
+/********************
+ * password warning *
+ ********************/
+#greeter_infobar {
+  margin-left: -200px;
+  margin-right: 4px;
+  background-color: transparent;
+  border: none;
+  font-weight: bold;
+  font-weight: normal;
+ }
+
+#window {
+/* Keeping this blank */ }
+
