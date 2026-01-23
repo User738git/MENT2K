@@ -20,14 +20,14 @@ sleep 0.5
 sudo cp -v "Lightdm/lightdm-gtk-greeter.css" "/usr/share/themes/MENT2K/gtk-3.0/apps/lightdm-gtk-greeter.css"
 
 sudo apt update
-sudo apt install -y marco mate-control-center mate-tweak gtk2-engines-pixbuf xfce4-panel-profiles picom
+sudo apt install -y lxappearance marco mate-control-center mate-tweak gtk2-engines-pixbuf xfce4-panel-profiles picom
 
 cp -r Misc/Panel-profiles/MENT2K.tar.bz2 "$HOME/.local/share/xfce4-panel-profiles/"
 
 cp -r "$HOME/.config/xfce4/xfconf/xfce-perchannel-xml/xfce4-panel.xml" "$HOME/.config/menus/menu-backup/xfce4-panel.xml.bak"
 
 xfce4-panel-profiles load "$HOME/.local/share/xfce4-panel-profiles/MENT2K.tar.bz2"
-
+s
 gsettings set org.gnome.desktop.interface gtk-theme 'MENT2K'
 gsettings set org.gnome.desktop.interface icon-theme 'Idk2k'
 gsettings set org.mate.interface gtk-theme 'MENT2K'
@@ -35,6 +35,22 @@ gsettings set org.mate.interface icon-theme 'Idk2k'
 
 xfconf-query --channel xsettings --property /Gtk/ThemeName --set 'MENT2K'
 xfconf-query --channel xsettings --property /Gtk/IconThemeName --set 'Idk2k'
+
+# Change cursor theme:
+
+echo "Changing cursor theme..."
+
+mkdir -p ~/.icons/default
+
+cp "Misc/index.theme" ~/.icons/default/
+
+sudo cp -r "Cursors/Chicago95 Standard Cursors" "usr/share/icons"
+
+sleep 0.2
+
+ln -s "usr/share/icons/Chicago95 Standard Cursors/cursors" ~/.icons/default/cursors
+
+
 
 create_dir_if_not_exists "$HOME/.config/menus/menu-backup"
 mv "$HOME/.config/menus/applications-merged" "$HOME/.config/menus/menu-backup/"
