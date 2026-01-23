@@ -86,6 +86,22 @@ fi
 
 # Apply Redmond97 as the marco window manager theme
 
+cp -r Misc/picom.conf ~/.config/
+
+cp -r Misc/.startup ~/
+
+mkdir -p ~/.config/autostart
+cat > ~/.config/autostart/startup-marco.desktop <<'EOF'
+[Desktop Entry]
+Type=Application
+Name=startup-marco
+Exec=~/.startup/.startup-marco.sh
+X-GNOME-Autostart-enabled=true
+NoDisplay=false
+EOF
+
+chmod +x "$HOME/.startup/.startup-marco.sh"
+
 gsettings set org.mate.Marco.general theme 'Redmond97 Millennium'
 sleep 0.2
 gsettings set org.mate.interface font-name 'Tahoma 8'
