@@ -159,36 +159,15 @@ sudo cp -r Lightdm/lightdm-gtk-greeter.conf /etc/lightdm/
 
 # Whisker menu icon replacement:
 
-# find the whiskermenu plugin number
-plugin=$(xfconf-query -c xfce4-panel -l | sed -n 's#.*/plugins/plugin-\([0-9]\+\).*whiskermenu.*#\1#p' | head -n1)
-
-if [ -z "$plugin" ]; then
-  echo "Whisker Menu plugin not found" >&2
-  exit 1
+if [[ ! -r ~/MENT2K/Misc/windowsstart.png ]]; then echo "icon missing"; ; fi
+if xfconf-query -c xfce4-panel -p /plugins/plugin-5/button-image >/dev/null 2>&1; then
+  xfconf-query -c xfce4-panel -p /plugins/plugin-5/button-image -s ~/MENT2K/Misc/windowsstart.png
+else
+  xfconf-query -c xfce4-panel -p /plugins/plugin-5/button-image --create -t string -s ~/MENT2K/Misc/windowsstart.png
 fi
 
-# probe common property names and use the first that exists or create one
-prefix="/plugins/plugin-$plugin"
-candidates=("button-image" "button-icon" "icon" "launcher-icon")
+xfce4-panel --restart &>/dev/null & disown
 
-prop=""
-for p in "${candidates[@]}"; do
-  if xfconf-query -c xfce4-panel -p "$prefix/$p" >/dev/null 2>&1; then
-    prop="$p"
-    break
-  fi
-done
-
-# if none exist, choose button-image as default to create
-if [ -z "$prop" ]; then
-  prop="button-image"
-fi
-
-key="$prefix/$prop"
-
-# create or set the property as a string with the absolute path
-xfconf-query -c xfce4-panel -p "$key" --create -t string -s "Misc/windowsstart.png" \
-  || xfconf-query -c xfce4-panel -p "$key" -s "Misc/windowsstart.png"
 
 xfce4-panel -r
 
