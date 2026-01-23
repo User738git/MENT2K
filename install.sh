@@ -44,7 +44,7 @@ mkdir -p ~/.icons/default
 
 cp "Misc/index.theme" ~/.icons/default/
 
-sudo cp -r "Cursors/Chicago95 Standard Cursors" "usr/share/icons"
+sudo cp -r "Cursors/Chicago95 Standard Cursors" "/usr/share/icons"
 
 sleep 0.2
 
