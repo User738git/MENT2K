@@ -35,7 +35,7 @@ A fork of the Chicago95 theme which looks like Windows 2000.
 
 ## Installation
 
-Go into the project folder and right click on an empty space.
+Go into the project folder in thunar and right click on an empty space.
 
 Click on "Open Terminal Here" and write this into the terminal that pops up:
 
@@ -47,7 +47,7 @@ Click on "Open Terminal Here" and write this into the terminal that pops up:
 
 If you prefer to install MENT2K manually, manual instructions will be added soon to INSTALL.md.
 
-## Changed your mind?
+### Changed your mind?
 
 An uninstall script will be added when I get time.
 
