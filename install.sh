@@ -93,7 +93,7 @@ fi
 
 cp -r Misc/picom.conf ~/.config/
 
-cp -r Misc/.startup/.startup-marco.sh /etc/
+sudo cp -r Misc/.startup/.startup-marco.sh /etc/
 
 mkdir -p ~/.config/autostart
 cat > ~/.config/autostart/startup-marco.desktop <<'EOF'
@@ -105,7 +105,7 @@ X-GNOME-Autostart-enabled=true
 NoDisplay=false
 EOF
 
-chmod +x "$HOME/.startup/.startup-marco.sh"
+sudo chmod +x "/etc/.startup-marco.sh"
 
 gsettings set org.mate.Marco.general theme 'Redmond97 Millennium'
 sleep 0.2
@@ -184,10 +184,10 @@ sudo cp -r Lightdm/lightdm-gtk-greeter.conf /etc/lightdm/
 
 sudo cp -r ~/MENT2K/Misc/windowsstart.png /etc/
 
-xfconf-query -c xfce4-panel -p /plugins/plugin-5/button-image -s "/etc/windowsstart.png"
+sudo xfconf-query -c xfce4-panel -p /plugins/plugin-5/button-image -s "/etc/windowsstart.png"
 
 
-xfconf-query -c xfce4-panel -p /plugins/plugin-5/button-image --create -t string -s "/etc/windowsstart.png"
+sudo xfconf-query -c xfce4-panel -p /plugins/plugin-5/button-image --create -t string -s "/etc/windowsstart.png"
 
 
 xfce4-panel -r
