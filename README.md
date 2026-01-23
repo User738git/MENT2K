@@ -43,7 +43,13 @@ Click on "Open Terminal Here" and write this into the terminal that pops up:
 
 *Notice: The install-script is an early WP. I (The maintainer of MENT2K) won't take any responbility for broken systems.*
 
+### Manual installation
+
 If you prefer to install MENT2K manually, manual instructions will be added soon to INSTALL.md.
+
+## Changed your mind?
+
+An uninstall script will be added when I get time.
 
 ### Install the LibreOffice icon theme from Chicago95:
 [Click here](https://github.com/grassmunk/Chicago95/blob/master/Extras/libreoffice-chicago95-iconset/README.md) for installing the LibreOffice Chicago95 icon theme.
