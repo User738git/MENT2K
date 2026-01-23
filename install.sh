@@ -100,12 +100,14 @@ cat > ~/.config/autostart/startup-marco.desktop <<'EOF'
 [Desktop Entry]
 Type=Application
 Name=startup-marco
-Exec=~/etc/.startup-marco.sh
+Exec=/etc/.startup-marco.sh
 X-GNOME-Autostart-enabled=true
 NoDisplay=false
 EOF
 
 sudo chmod +x "/etc/.startup-marco.sh"
+
+sudo chmod +x "~/.config/autostart/startup-marco.desktop"
 
 gsettings set org.mate.Marco.general theme 'Redmond97 Millennium'
 sleep 0.2
@@ -115,8 +117,10 @@ gsettings set org.mate.Marco.general titlebar-font 'Tahoma Bold 8'
 
 
 # Change the xfdesktop wallpaper to just the color "#3D6FA2"
-xfconf-query --channel xfce4-desktop --property /backdrop/screen0/monitoreDP-1/workspace0/rgba -s "[0.239216, 0.435294, 0.635294, 1.000000]"
-xfconf-query --channel xfce4-desktop --property /backdrop/screen0/monitoreDP-1/workspace0/rgba -s [ 0.239216, 0.435294, 0.635294, 1.000000 ]
+
+cp -r Misc/Background.png ~/.themes/
+xfconf-query --channel xfce4-desktop --list | grep last-image | xargs xfconf-query -c xfce4-desktop -s ~/.themes/Background.png -p
+
 xfconf-query -c xfce4-desktop -p /backdrop/screen0/monitorHDMI-1/workspace0/rgba --create -t double -s 0.239216 -s 0.435294 -s 0.635294 -s 1.0
 xfconf-query -c xfce4-desktop -p /backdrop/screen0/monitoreDP-1/workspace0/rgba --create -t double -s 0.239216 -s 0.435294 -s 0.635294 -s 1.0
 xfconf-query -c xfce4-desktop -p /backdrop/screen0/monitor0/workspace0/rgba --create -t double -s 0.239216 -s 0.435294 -s 0.635294 -s 1.0
@@ -182,7 +186,7 @@ sudo cp -r Lightdm/lightdm-gtk-greeter.conf /etc/lightdm/
 
 # Whisker menu icon replacement:
 
-sudo cp -r ~/MENT2K/Misc/windowsstart2.png /etc/
+sudo cp -r Misc/windowsstart2.png /etc/
 
 xfconf-query -c xfce4-panel -p /plugins/plugin-5/button-title --create -t string -s "Start"
 
