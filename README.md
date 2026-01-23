@@ -14,6 +14,7 @@ A fork of the Chicago95 theme which looks like Windows 2000.
 - A look-alike start menu.
 - A bordered system tray.
 - Custom icon theme. (Forked from SE98)
+- A cool login screen.
 - etc.
 
 ### Requirements:
