@@ -159,15 +159,15 @@ sudo cp -r Lightdm/lightdm-gtk-greeter.conf /etc/lightdm/
 
 # Whisker menu icon replacement:
 
-if [[ ! -r ~/MENT2K/Misc/windowsstart.png ]]; then echo "icon missing"; ; fi
-if xfconf-query -c xfce4-panel -p /plugins/plugin-5/button-image >/dev/null 2>&1; then
-  xfconf-query -c xfce4-panel -p /plugins/plugin-5/button-image -s ~/MENT2K/Misc/windowsstart.png
-else
-  xfconf-query -c xfce4-panel -p /plugins/plugin-5/button-image --create -t string -s ~/MENT2K/Misc/windowsstart.png
+if [[ ! -r "$HOME/MENT2K/Misc/windowsstart.png" ]]; then
+  echo "icon missing"
 fi
 
-xfce4-panel --restart &>/dev/null & disown
-
+if xfconf-query -c xfce4-panel -p /plugins/plugin-5/button-image >/dev/null 2>&1; then
+  xfconf-query -c xfce4-panel -p /plugins/plugin-5/button-image -s "$HOME/MENT2K/Misc/windowsstart.png"
+else
+  xfconf-query -c xfce4-panel -p /plugins/plugin-5/button-image --create -t string -s "$HOME/MENT2K/Misc/windowsstart.png"
+fi
 
 xfce4-panel -r
 
