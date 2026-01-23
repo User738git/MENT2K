@@ -170,7 +170,7 @@ padding: 20px
 .xfce4-panel .flat:not(.toggle) {
   color: @panel_fg_color;
   margin: -1px;
-  margin-right: -2px
+  margin-right: -2px;
   padding: 0px;
   border: none;
   box-shadow: none;
@@ -271,15 +271,15 @@ wnck-pager {
 #xfce4-power-manager-plugin:active,
 #xfce4-power-manager-plugin:hover,
 #xfce4-power-manager-plugin:checked {
-  box-shadow: inset 1px 4px @border_shade, inset 0px -4px @border_bright, inset 0px 3px @bg_color, inset -0px -3px @bg_color, inset 0px 1px @border_bright;
+  box-shadow: inset 1px 4px @border_shade, inset 8px 4px @border_shade, inset 7px 0px @bg_color, inset 0px -4px @border_bright, inset 0px 3px @bg_color, inset -0px -3px @bg_color, inset 0px 1px @border_bright;
    margin-top: 0px;
    margin-bottom: -2px;
-   margin-right: -9px;
+   margin-right: -11px;
    margin-left: -1px;
    padding-top: 2px;
    border: none;
    border-bottom: 1px solid @bg_color;
-   border-left:  solid -1px @bg_color;
+   border-left: solid inset 4px @bg_color;
 }
   #xfce4-power-manager-plugin * {
     -gtk-icon-style: regular;
@@ -319,12 +319,12 @@ wnck-pager {
   {
     box-shadow: inset 0px 4px @border_shade, inset 0px -4px @border_bright, inset 0px 3px @bg_color, inset -0px -3px @bg_color, inset 0px 1px @border_bright;
      padding-top: 0;
-     padding-left: 0px;
-     padding-right: -3px;
+     padding-left: 2px;
      border-bottom: 1px solid @bg_color;
      padding-bottom: 0px;
      border-left:  solid -1px @bg_color;
-     margin-bottom: -2px
+     margin-bottom: -2px;
+     margin-left: -8px
   }
 .xfce4-panel #pulseaudio-button * {
   -gtk-icon-transform: scale(1); }
