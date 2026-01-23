@@ -41,6 +41,14 @@ Click on "Open Terminal Here" and write this into the terminal that pops up:
 
 `sh install.sh`
 
+### OR
+
+Write this into the terminal:
+
+`git clone https://github.com/User738git/MENT2K.git
+cd MENT2K
+sh install.sh`
+
 *Notice: The install-script is an early WP. I (The maintainer of MENT2K) won't take any responbility for broken systems.*
 
 ### Manual installation
