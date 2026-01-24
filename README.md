@@ -36,7 +36,7 @@ A fork of the Chicago95 theme which looks like Windows 2000 and focuses on detai
 
 ## Installation
 
-Go into the project folder in thunar and right click on an empty space.
+Navigate to the project folder in Thunar after extracting it, and then right-click in an empty area.
 
 Click on "Open Terminal Here" and write this into the terminal that pops up:
 
