@@ -83,6 +83,14 @@ An uninstall script will be added when I get time.
 ### The theme in action on a CRT-monitor.
 <img src="Screenshots/CRT.JPG" alt="CRT"/>
 
+### Tested on:
+
+Xubuntu, Xfce 4.20.
+
+Xubuntu, Xfce 4.18.1.
+
+Mint, don't remember version of Xfce.
+
 ### Screenshots:
 [Click here to view screenshots](Screenshots/SCREENSHOTS.md)
 
