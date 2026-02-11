@@ -15,11 +15,11 @@ XfdesktopIconView, XfceDesktop.view, XfdesktopIconView.view {
 }
 XfdesktopIconView.view {
   -XfdesktopIconView-ellipsize-icon-labels: 0;
-  -XfdesktopIconView-cell-text-width-proportion: 2.5;
-  -XfdesktopIconView-cell-padding: -1.9;
+  -XfdesktopIconView-cell-text-width-proportion: 2.4379;
+  -XfdesktopIconView-cell-padding: -0.999;
   -XfdesktopIconView-cell-spacing: -10;
-  background: #3d6fa200;
-  margin-left: -10px
+  background: none;
+  margin-left: -10px;
 }
   XfdesktopIconView.view:active {
     background-image: -gtk-gradient(linear, left top, right bottom, from (@selected_bg_color));
@@ -27,6 +27,10 @@ XfdesktopIconView.view {
     color: shade(@selected_bg_color, 3.0); }
   XfdesktopIconView.view .label {
     text-shadow: none;
+    background: #3d6fa200;
+    margin-top: -9px;
+    max-height: 3px;
+    padding: 0;
     color: @font_bright; }
   XfdesktopIconView.view .rubberband {
     border: 1px dotted @xfd_rubberband_outline;
@@ -49,8 +53,8 @@ up to 24 different positions. */
 #tasklist-24 > box, #tasklist-25 > box {
    border-left: 11px solid;
    border-image: url("../assets/handle.png");
-   border-image-slice: 2 2 2 11;
-   margin-left: -5px;
+   border-image-slice: 1 2 2 11;
+   margin-left: -10px;
    margin-right: -20px;
    padding-right: 20px;
 }
@@ -72,26 +76,27 @@ margin: 90px;
 
 #XfcePanelWindow  widget > widget:nth-child(3) box #launcher-arrow:active image {
   margin-left: -7px;
-  margin-right: 0px;
+  margin-right: -2px;
 }
 
 #XfcePanelWindow  widget > widget:nth-child(4) box #launcher-arrow image {
-  margin-left: -4px;
+  margin-left: -8px;
   margin-right: 0px;
 }
 #XfcePanelWindow  widget > widget:nth-child(5) box #launcher-arrow image {
-  margin-left: -12px;
+  margin-left: -21px;
   margin-right: -3px;
 }
 
 #XfcePanelWindow  widget > widget:nth-child(6) box #launcher-arrow image {
-  margin-left: -9px;
+  margin-left: -8px;
   margin-right: 7px;
 }
 
 widget#launcher-1, widget#launcher-2, widget#launcher-3, widget#launcher-4, widget#launcher-5, widget#launcher-6, widget#launcher-7, widget#launcher-8, widget#launcher-9, widget#launcher-10, widget#launcher-11, widget#launcher-12, widget#launcher-13, widget#launcher-14, widget#launcher-15, widget#launcher-16, widget#launcher-17, widget#launcher-18, widget#launcher-19, widget#launcher-20, widget#launcher-21, widget#launcher-22, widget#launcher-23, widget#launcher-24, widget#launcher-25, widget#launcher-26, widget#launcher-27, widget#launcher-28, widget#launcher-29, widget#launcher-30, widget#launcher-31, widget#launcher-32, widget#launcher-33, widget#launcher-34, widget#launcher-35, widget#launcher-36, widget#launcher-37, widget#launcher-38, widget#launcher-39, widget#launcher-40, widget#launcher-41, widget#launcher-42, widget#launcher-43 {
-  margin-left: -9px;
-  margin-right: 7px;
+  margin-left: -10px;
+  margin-right: 6px;
+  padding: 0px;
 }
 
 #xfce4-notification-plugin {
@@ -109,6 +114,7 @@ padding: 20px
    border-image: url("../assets/handle-panel2.png");
    background: url("../assets/handle-panel-bg.png");
    background-repeat: no-repeat;
+   margin-right: -1px;
 }
 
 /* XFCE Panel Bar */
@@ -187,6 +193,7 @@ padding: 20px
   background-color: @bg_color; }
   #clock-button label {
     padding: 11px;
+    padding-top: 12px
   }
 /*  Workspace switcher */
 wnck-pager {
@@ -271,8 +278,8 @@ wnck-pager {
 #xfce4-power-manager-plugin:active,
 #xfce4-power-manager-plugin:hover,
 #xfce4-power-manager-plugin:checked {
-  box-shadow: inset 1px 4px @border_shade, inset 8px 4px @border_shade, inset 7px 0px @bg_color, inset 0px -4px @border_bright, inset 0px 3px @bg_color, inset -0px -3px @bg_color, inset 0px 1px @border_bright;
-   margin-top: 0px;
+  box-shadow: inset 1px 4px @border_shade, inset 8px 4px @border_shade,  inset 0px -4px @border_bright, inset 7px 0px @bg_color, inset 0px 3px @bg_color, inset -0px -3px @bg_color, inset 0px 1px @border_bright;
+   margin-top: 0;
    margin-bottom: -2px;
    margin-right: -11px;
    margin-left: -1px;

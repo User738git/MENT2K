@@ -212,6 +212,8 @@ picom --config ~/.config/picom.conf &
 
 echo "Installation and configuration complete."
 
+sleep 1
+
 clear
 printf ''
 printf 'A reboot is recommended to make everything look correctly. Do you want to reboot now? (Y/n)'
