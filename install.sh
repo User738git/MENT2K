@@ -22,7 +22,7 @@ sudo cp -v "Lightdm/lightdm-gtk-greeter.css" "/usr/share/themes/MENT2K/gtk-3.0/a
 sudo apt update
 sudo apt install -y lxappearance marco mate-control-center mate-tweak gtk2-engines-pixbuf xfce4-panel-profiles picom wget
 
-cp -r Misc/Panel-profiles/MENT2K.tar.bz2 "$HOME/.local/share/xfce4-panel-profiles/"
+cp -r Misc/Panel-profiles/MENT2K.tar.bz2 "~/.local/share/xfce4-panel-profiles/MENT2K.tar.bz2"
 
 cp -r "$HOME/.config/xfce4/xfconf/xfce-perchannel-xml/xfce4-panel.xml" "$HOME/.config/menus/menu-backup/xfce4-panel.xml.bak"
 
@@ -31,8 +31,8 @@ cp -v Misc/xfce-office.directory ~/.local/share/desktop-directories/xfce-office.
 cp -v Misc/xfce-settings.directory ~/.local/share/desktop-directories/xfce-settings.directory
 cp -v Misc/xfce-accessories.directory ~/.local/share/desktop-directories/xfce-accessories.directory
 
-xfce4-panel-profiles load "$HOME/.local/share/xfce4-panel-profiles/MENT2K.tar.bz2"xfce-office.directory
-s
+xfce4-panel-profiles load ~/.local/share/xfce4-panel-profiles/MENT2K.tar.bz2
+
 gsettings set org.gnome.desktop.interface gtk-theme 'MENT2K'
 gsettings set org.gnome.desktop.interface icon-theme 'Idk2k'
 gsettings set org.mate.interface gtk-theme 'MENT2K'
@@ -166,10 +166,14 @@ set_default_font() {
 
 }
 
+restart() {
+sudo reboot
+}
+
 # Main script execution
 clear
 printf ''
-printf 'Do you want to download and install the Tahoma font from https://www.dafontfree.co/download/tahoma/? (y/n): '
+printf 'Do you want to download and install the Tahoma font from https://www.dafontfree.co/download/tahoma/? (Y/n): '
 read -r confirm
 case "$confirm" in
   y|Y)
@@ -207,3 +211,18 @@ pkill picom
 picom --config ~/.config/picom.conf &
 
 echo "Installation and configuration complete."
+
+clear
+printf ''
+printf 'A reboot is recommended to make everything look correctly. Do you want to reboot now? (Y/n)'
+read -r confirm
+case "$confirm" in
+  y|Y)
+    echo "rebooting in a few seconds..."
+    restart
+    ;;
+  *)
+    echo "Not rebooting."
+    exit
+    ;;
+esac
