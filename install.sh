@@ -20,7 +20,7 @@ sleep 0.5
 sudo cp -v "Lightdm/lightdm-gtk-greeter.css" "/usr/share/themes/MENT2K/gtk-3.0/apps/lightdm-gtk-greeter.css"
 
 sudo apt update
-sudo apt install -y lxappearance marco mate-control-center mate-tweak gtk2-engines-pixbuf xfce4-panel-profiles picom
+sudo apt install -y lxappearance marco mate-control-center mate-tweak gtk2-engines-pixbuf xfce4-panel-profiles picom wget
 
 cp -r Misc/Panel-profiles/MENT2K.tar.bz2 "$HOME/.local/share/xfce4-panel-profiles/"
 
@@ -167,6 +167,8 @@ set_default_font() {
 }
 
 # Main script execution
+clear
+printf ''
 printf 'Do you want to download and install the Tahoma font from https://www.dafontfree.co/download/tahoma/? (y/n): '
 read -r confirm
 case "$confirm" in
