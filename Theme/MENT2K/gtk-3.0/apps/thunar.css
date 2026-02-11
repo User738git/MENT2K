@@ -31,53 +31,69 @@ Make sure that all changes made here are part of the Thunar application.
     margin-bottom: -2px; }
 
 .thunar toolbar toolitem entry image.left {
-  padding: 1px;
+  padding: 0 1px;
   margin-right: 4px; 
-  
 }
+
+.thunar toolbar toolbutton button {
+  padding: 0 0px;
+  margin: 0px; 
+  margin-bottom: 1px;
+  min-height: 16px
+}
+
 .thunar toolbar {
   background-image: url("../assets/handlewhitebig.png");
+  padding: 0px 8px 1px;
   background-repeat: no-repeat;
   border-top: 1px solid @bg_bright;
   margin-top: 1px;
   min-height: 10px;
-  max-height: 16px;
+  max-height: 10px;
   margin-left: 1px;
   box-shadow: -1px -1px @bg_shade,  -2px -2px @bg_shade inset, -1px -1px white inset;}
   
 .toolbar-cover-frame {
-  margin: 2px;
+  margin: 0px;
   border-color: transparent;
   background-color: transparent; }
 
 .thunar menubar {
-  margin-top: 1px;
-  border-top: 1px solid @bg_bright;
-  box-shadow: -1px -1px @bg_shade, 2px 1px @bg_bright, -1px 1px @bg_shade}
-
-.thunar menubar {
-    min-height: 23px; 
+    max-height: 20px; 
     background-image: url("../assets/handlewhite.png"); 
     background-repeat: no-repeat; /* Without this, the whole menubar will have the "handle1" texture. */
+    padding: 0px;
     padding-left: 13px;
     margin-left: 1px;
+    margin-top: 1px;
+    border-top: 1px solid @bg_bright;
+    box-shadow: -1px -1px @bg_shade, 2px 1px @bg_bright, -1px 1px @bg_shade
 }
     
 
 /*  You can enable the spin button theme by uncommenting the following! */
     .thunar menubar > menuitem:last-child {
       background-color: black;
-      border-left: 1px solid @bg_shade;
-      border-right: 1px solid @bg_bright;
-      box-shadow: inset 0px 1px @bg_dark;
+      border-left: 1px solid @bg_bright;
+      border-right: 2px solid @bg_shade;
+      box-shadow: inset 0px -4px @bg_dark, -1px 0px @bg_shade;
       min-width: 38px;
-      min-height: 17px;
+      min-height: 10px !important;
       background-image: url("../assets/status_badge_msw.png");
       background-repeat: no-repeat;
       background-position: center;
-      background-size: 38px, 21px;
-      padding-left: 2px;
-      padding-right: 0px; }
+      background-size: 104.6%;
+      padding-top: 0;
+      padding-left: 0px;
+      padding-right: 0px;
+      margin-top: -1px;
+ }
+
+    .thunar menuitem {
+      margin: -1px;
+      padding: 0px 8px;
+
+ }
 .thunar > grid > toolbar * { -gtk-icon-transform: scale(1); }
 .thunar notebook .standard-view {
   padding: 0px;
@@ -121,6 +137,24 @@ Make sure that all changes made here are part of the Thunar application.
   background-color: shade(@selected_bg_color, 3.0); }
   .thunar widget.view:selected:focus {
     background-color: @selected_bg_color; }
+
+
+ThunarTreeView {
+  -GtkTreeView-enable-tree-lines: true;
+}
+
+
+.thunar { 
+-gtk-enable-tree-lines: true;
+} 
+
+.thunar entry {
+    padding-bottom: 0px;
+    margin: 0px;
+    margin-bottom: 1px;
+    min-height: 10px
+}
+
 
 .treeview {
   font-family: tahoma;
