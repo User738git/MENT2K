@@ -1,6 +1,4 @@
-#!/usr/bin/env bash
-export DISPLAY=:0
-
+#!/bin/bash
 
 # Function to create a directory if it does not exist:
 create_dir_if_not_exists() {
