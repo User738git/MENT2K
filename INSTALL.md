@@ -10,9 +10,6 @@
 
 ## Installing Chicago95
 
-
-<a name="install_auto"/>
-
 Manual installation and configuration steps
 
     Open a terminal.
