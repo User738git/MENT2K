@@ -50,7 +50,8 @@ git clone https://github.com/User738git/MENT2K.git
 
 cd ~/MENT2K
 
-sh install.sh```
+sh install.sh
+```
 
 *Notice: The install-script is an early WP. I (The maintainer of MENT2K) won't take any responbility for broken systems.*
 
