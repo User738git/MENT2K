@@ -55,7 +55,7 @@ cd ~/MENT2K
 sh install.sh
 ```
 
-*Notice: The install-script is an early WP. I (The maintainer of MENT2K) won't take any responbility for broken systems.*
+*Notice: The install-script is an early WP. I (The maintainer of MENT2K) won't take any responbility for broken systems. A restore point is recommended.*
 
 ### Manual installation
 
