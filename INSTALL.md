@@ -6,7 +6,6 @@
 * [Installing Chicago95](#install_theme)
 <!--te-->
 
----
 <a name="install_theme"/>
 
 ## Installing Chicago95
