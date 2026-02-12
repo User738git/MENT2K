@@ -45,7 +45,10 @@ gsettings set org.gnome.desktop.interface icon-theme 'Idk2k'
 gsettings set org.mate.interface gtk-theme 'MENT2K'
 gsettings set org.mate.interface icon-theme 'Idk2k'
 xfconf-query --channel xsettings --property /Gtk/ThemeName --set 'MENT2K'
+xfconf-query --channel xsettings --property /Net/ThemeName --set 'MENT2K'
+xfconf-query --channel xsettings --property /Net/IconThemeName --set 'Idk2k'
 xfconf-query --channel xsettings --property /Gtk/IconThemeName --set 'Idk2k'
+
 
 # Change cursor theme
 echo "Changing cursor theme..."
