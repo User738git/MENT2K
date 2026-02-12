@@ -25,13 +25,7 @@ A fork of the Chicago95 theme which looks like Windows 2000 and focuses on detai
 - The xfce4-panel-profiles package.
 - A Window compositor (Picom).
 - Marco window manager for gradient titlebars.
-
------
-
-## Documentation
-
-[Click here](INSTALL.md) for Chicago95 documentation and extra features (just from Chicago95).
-
+  
 -----
 
 ## Installation
@@ -59,7 +53,7 @@ sh install.sh
 
 ### Manual installation
 
-If you prefer to install MENT2K manually, manual instructions will be added soon to INSTALL.md.
+If you prefer to install MENT2K manually, [Click here](INSTALL.md).
 
 > ### Changed your mind?
 
