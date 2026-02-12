@@ -46,7 +46,7 @@ sh install.sh
 
 ### OR
 
-Write this into the terminal:
+Write this into your terminal without downloading anything at advance:
 ```sh
 git clone https://github.com/User738git/MENT2K.git
 
