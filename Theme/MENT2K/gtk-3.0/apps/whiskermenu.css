@@ -13,6 +13,7 @@ the whisker menu without having to correct their pointer location. */
   #applicationmenu-button box {
     padding: 2px;
     padding-top: 1px;
+    padding-right: 1px;
     margin: 1px;
     margin-top: 2px;
     border: 2px solid @border_color;
@@ -24,7 +25,7 @@ the whisker menu without having to correct their pointer location. */
     #whiskermenu-button:checked box,
     #applicationmenu-button:active box,
     #applicationmenu-button:checked box {
-      padding-left: 3px;
+      padding-left: 2px;
       padding-right: 1px;
       padding-top: 3px;
       margin: 1px;
@@ -43,6 +44,7 @@ the whisker menu without having to correct their pointer location. */
   #whiskermenu-button label,
   #applicationmenu-button label {
     padding: 1px;
+    padding-top: 2px;
     border: none;
     color: black;
     font-family: Tahoma, "Microsoft Sans Serif", Sans, Sans-Serif;
