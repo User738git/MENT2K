@@ -41,7 +41,9 @@ cp -v Misc/xfce-accessories.directory ~/.local/share/desktop-directories/xfce-ac
 
 # Load panel profiles and set themes
 xfce4-panel-profiles load ~/.local/share/xfce4-panel-profiles/MENT2K.tar.bz2
+sleep 0.8
 gsettings set org.gnome.desktop.interface gtk-theme 'MENT2K'
+sleep 0.8
 gsettings set org.gnome.desktop.interface icon-theme 'Idk2k'
 gsettings set org.mate.interface gtk-theme 'MENT2K'
 gsettings set org.mate.interface icon-theme 'Idk2k'
