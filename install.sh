@@ -1,4 +1,6 @@
 #!/bin/bash
+export DISPLAY=:0
+
 
 # Function to create a directory if it does not exist:
 create_dir_if_not_exists() {
