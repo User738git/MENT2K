@@ -40,7 +40,9 @@ Navigate to the project folder in Thunar after extracting it, and then right-cli
 
 Click on "Open Terminal Here" and write this into the terminal that pops up:
 
-`sh install.sh`
+```sh
+sh install.sh
+```
 
 ### OR
 
