@@ -1,3 +1,5 @@
+#!/bin/bash
+
 # Function to create a directory if it does not exist:
 create_dir_if_not_exists() {
     if [ ! -d "$1" ]; then
@@ -5,6 +7,7 @@ create_dir_if_not_exists() {
     fi
 }
 
+# Create necessary directories
 create_dir_if_not_exists "$HOME/.themes"
 create_dir_if_not_exists "/usr/share/themes"
 create_dir_if_not_exists "$HOME/.icons"
@@ -12,89 +15,66 @@ create_dir_if_not_exists "/usr/share/icons"
 create_dir_if_not_exists "$HOME/.local/share/xfce4-panel-profiles"
 create_dir_if_not_exists "$HOME/.config/menus/menu-backup"
 
+# Copy themes and icons
 cp -r Theme/MENT2K "$HOME/.themes/"
 sudo cp -r Theme/MENT2K "/usr/share/themes/"
 cp -r Icons/Idk2k "$HOME/.icons/"
 sudo cp -r Icons/Idk2k "/usr/share/icons/"
-sleep 0.5
+
+# Update lightdm-gtk-greeter.css
 sudo cp -v "Lightdm/lightdm-gtk-greeter.css" "/usr/share/themes/MENT2K/gtk-3.0/apps/lightdm-gtk-greeter.css"
 
+# Install necessary packages
 sudo apt update
 sudo apt install -y lxappearance marco mate-control-center mate-tweak gtk2-engines-pixbuf xfce4-panel-profiles picom wget
 
+# Copy panel profiles and menu backups
 cp -r Misc/Panel-profiles/MENT2K.tar.bz2 "~/.local/share/xfce4-panel-profiles/MENT2K.tar.bz2"
-
 cp -r "$HOME/.config/xfce4/xfconf/xfce-perchannel-xml/xfce4-panel.xml" "$HOME/.config/menus/menu-backup/xfce4-panel.xml.bak"
 
+# Copy desktop directories
 cp -v Misc/xfce-games.directory ~/.local/share/desktop-directories/xfce-games.directory
 cp -v Misc/xfce-office.directory ~/.local/share/desktop-directories/xfce-office.directory
 cp -v Misc/xfce-settings.directory ~/.local/share/desktop-directories/xfce-settings.directory
 cp -v Misc/xfce-accessories.directory ~/.local/share/desktop-directories/xfce-accessories.directory
 
+# Load panel profiles and set themes
 xfce4-panel-profiles load ~/.local/share/xfce4-panel-profiles/MENT2K.tar.bz2
-
 gsettings set org.gnome.desktop.interface gtk-theme 'MENT2K'
 gsettings set org.gnome.desktop.interface icon-theme 'Idk2k'
 gsettings set org.mate.interface gtk-theme 'MENT2K'
 gsettings set org.mate.interface icon-theme 'Idk2k'
-
 xfconf-query --channel xsettings --property /Gtk/ThemeName --set 'MENT2K'
 xfconf-query --channel xsettings --property /Gtk/IconThemeName --set 'Idk2k'
 
-# Change cursor theme:
-
+# Change cursor theme
 echo "Changing cursor theme..."
-
-mkdir -p ~/.icons/default
-
+create_dir_if_not_exists ~/.icons/default
 cp "Misc/index.theme" ~/.icons/default/
-
 sudo cp -r "Cursors/Chicago95 Standard Cursors" "/usr/share/icons"
+ln -s "/usr/share/icons/Chicago95 Standard Cursors/cursors" ~/.icons/default/cursors
 
-sleep 0.2
-
-ln -s "usr/share/icons/Chicago95 Standard Cursors/cursors" ~/.icons/default/cursors
-
-
-
+# Backup and replace menus
 create_dir_if_not_exists "$HOME/.config/menus/menu-backup"
 mv "$HOME/.config/menus/applications-merged" "$HOME/.config/menus/menu-backup/"
 mv "$HOME/.config/menus/xfce-applications.menu" "$HOME/.config/menus/menu-backup/"
-
 sudo cp -r Misc/menus/* "$HOME/.config/menus/"
 
+# Copy desktop shortcuts
 cp -r Misc/desktop-shortcuts/ "$HOME/Desktop"
 
 # Make marco the default window manager
 update-alternatives --set x-session-manager /usr/bin/marco
 
+# Apply Redmond97 theme
 echo "Process: Marco theme"
-git clone https://github.com/matthewmx86/Redmond97.git
+git clone https://github.com/matthewmx86/Redmond97.git || { echo "Failed to clone the Redmond97 repository."; exit 1; }
+sudo cp -r "Redmond97/Theme/no-csd/Redmond97 Millennium" ~/.themes || { echo "Failed to move the theme."; exit 1; }
+rm -rf Redmond97 || { echo "Failed to delete the cloned Redmond97 directory."; exit 1; }
 
-if [ $? -ne 0 ]; then
-    echo "Failed to clone the Redmond97 repository."
-fi
-
-echo "Moving marco theme to ~/.themes..."
-sudo cp -r "Redmond97/Theme/no-csd/Redmond97 Millennium" ~/.themes
-
-if [ $? -ne 0 ]; then
-    echo "Failed to move the theme."
-fi
-
-echo "Deleting cloned Redmond97 directory..."
-rm -rf Redmond97
-
-if [ $? -ne 0 ]; then
-    echo "Failed to delete the cloned Redmond97 directory."
-fi
-
-# Apply Redmond97 as the marco window manager theme
-
+# Configure picom and autostart
 cp -r Misc/picom.conf ~/.config/
-
 sudo cp -r Misc/.startup/.startup-marco.sh /etc/
-
 mkdir -p ~/.config/autostart
 cat > ~/.config/autostart/startup-marco.desktop <<'EOF'
 [Desktop Entry]
@@ -104,6 +84,7 @@ Exec=/etc/.startup-marco.sh
 X-GNOME-Autostart-enabled=true
 NoDisplay=false
 EOF
+
 
 sudo chmod +x "/etc/.startup-marco.sh"
 
@@ -127,9 +108,8 @@ xfconf-query -c xfce4-desktop -p /backdrop/screen0/monitor0/workspace0/rgba --cr
 xfconf-query -c xfce4-desktop -p /backdrop/screen0/monitorHDMI-1/workspace0/image-style -s 2
 xfconf-query -c xfce4-desktop -p /backdrop/screen0/monitoreDP-1/workspace0/image-style -s 2
 xfconf-query -c xfce4-desktop -p /backdrop/screen0/monitor0/workspace0/image-style -s 2
-xfconf-query --channel xfce4-desktop --property /desktop-icons/icon-size --set 32
+xfconf-query - xfce4-desktop - /desktop-icons/icon-size -s 32
 echo '(gtk_accel_path "<Actions>/ThunarWindow/view-location-selector-entry" "true")' >> ~/.config/Thunar/accels
-xfconf-query --channel xsettings --property /Gtk/FontName --set "Tahoma 8"
 
 FONT_ZIP_FILE="Tahoma-4styles-Font.zip"
 EXTRACTED_FOLDER="Tahoma-4styles-Font"
