@@ -35,7 +35,7 @@ Navigate to the project folder in Thunar after extracting it, and then right-cli
 Click on "Open Terminal Here" and write this into the terminal that pops up:
 
 ```sh
-sh install.sh
+bash ./install.sh
 ```
 
 ### OR
@@ -46,7 +46,7 @@ git clone https://github.com/User738git/MENT2K.git
 
 cd ~/MENT2K
 
-sh install.sh
+bash ./install.sh
 ```
 
 *Notice: The install-script is an early WP. I (The maintainer of MENT2K) won't take any responbility for broken systems. A restore point is recommended.*
