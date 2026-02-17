@@ -10,10 +10,9 @@
 <a name="install_theme"/>
 
 ## Installing MENT2K
+> Note: the theme assumes you have installed the XFCE Desktop Environment in advance.
 
 ### Manual installation and configuration steps
-
-> Note: the theme assumes you have installed the XFCE Desktop Environment in advance.
 
 Open a terminal.
 
