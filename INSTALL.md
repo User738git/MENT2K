@@ -4,6 +4,7 @@
 
 <!--ts-->
 * [Installing MENT2K](#install_theme)
+* [Optional Steps] (#optional)
 <!--te-->
 
 <a name="install_theme"/>
@@ -231,6 +232,7 @@ The script recommends rebooting. If you want to reboot now:
 Otherwise log out and log back in (or reboot) to ensure all theme and session changes take effect.
 
 ----------
+<a name="optional"/>
 
 ## Optional:
 
@@ -241,8 +243,9 @@ Download and extract:
 
     wget "https://www.yohng.com/files/TerminalVector.zip"
     unzip -o "TerminalVector.zip" -d ./TerminalVector
-
+    
     sudo cp ./TerminalVector/TerminalVector.ttf /usr/share/fonts/truetype/
+    sudo fc-cache -fv
 
 Go into "Terminal Preferences" and into the "Appearance" tab.
 
