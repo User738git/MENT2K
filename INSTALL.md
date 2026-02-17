@@ -70,7 +70,7 @@ Load the XFCE panel profile:
 
     xfce4-panel-profiles load ~/.local/share/xfce4-panel-profiles/MENT2K.tar.bz2
 
-> If that didn't work: right click the xfce4-panel, go to Panel preferences and click "Backup and restore". Click on "MENT2K" and "apply configuration".
+> **If that didn't work:** right click the xfce4-panel, go to Panel preferences and click "Backup and restore". Click on "MENT2K" and "apply configuration".
 
 Set GTK and icon themes for GNOME/MATE/Xfce:
 
