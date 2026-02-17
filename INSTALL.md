@@ -3,12 +3,12 @@
 # Index
 
 <!--ts-->
-* [Installing Chicago95](#install_theme)
+* [Installing MENT2K](#install_theme)
 <!--te-->
 
 <a name="install_theme"/>
 
-## Installing Chicago95
+## Installing MENT2K
 
 ### Manual installation and configuration steps
 
@@ -48,7 +48,7 @@ Create profile dir (if not already):
 
     mkdir -p ~/.local/share/xfce4-panel-profiles
 
-Copy profile archive:
+Copy xfce-panel profile archive:
 
     cp -r Misc/Panel-profiles/MENT2K.tar.bz2 ~/.local/share/xfce4-panel-profiles/
 
@@ -70,9 +70,7 @@ Load the XFCE panel profile:
 
 Set GTK and icon themes for GNOME/MATE/Xfce:
 
-    sleep 0.8
     gsettings set org.gnome.desktop.interface gtk-theme 'MENT2K'
-    sleep 0.8
     gsettings set org.gnome.desktop.interface icon-theme 'Idk2k'
     gsettings set org.mate.interface gtk-theme 'MENT2K'
     gsettings set org.mate.interface icon-theme 'Idk2k'
@@ -223,6 +221,43 @@ The script recommends rebooting. If you want to reboot now:
     sudo reboot
 
 Otherwise log out and log back in (or reboot) to ensure all theme and session changes take effect.
+
+Optional:
+
+### Windows CMD font and CMD feel:
+
+When prompted to install (manual steps):
+Download and extract:
+
+    wget "https://www.yohng.com/files/TerminalVector.zip"
+    unzip -o "TerminalVector.zip" -d ./TerminalVector
+
+    sudo cp ./TerminalVector/TerminalVector.ttf /usr/share/fonts/truetype/
+
+Go into "Terminal Preferences" and into the "Appearance" tab.
+
+Pick a font and pick the font "Terminal Vector Normal" and set the value of "Size" to 9.
+
+Add this line of code to the end of your ~/.bashrc file:
+
+	function msdos_pwd
+	{
+	    local dir="`pwd`"
+
+	    echo $dir | tr '/' '\\'
+	}
+
+	export PS1='C:`msdos_pwd`> '
+
+	echo "Microsoft Windows 2000 [Version 5.00]"
+	echo "(C) Copyright 1985-2000 Microsoft Corp."
+	echo
+
+	export LD_PRELOAD=/usr/lib/x86_64-linux-gnu/libgtk3-nocsd.so.0
+
+Your terminal should now look something like this: 
+
+<img src="Screenshots/Terminal.png" alt="Terminal">
 
 Notes and cautions:
 
