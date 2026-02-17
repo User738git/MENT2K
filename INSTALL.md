@@ -152,15 +152,19 @@ Change XFCE desktop background to a solid color and install Background.png:
     cp -r Misc/Background.png ~/.themes/
     xfconf-query --channel xfce4-desktop --list | grep last-image | xargs -r xfconf-query -c xfce4-desktop -s ~/.themes/Background.png -p
 
-Set workspace color (run each line; adjust monitor names if different):
+#### Desktop options:
 
-    xfconf-query -c xfce4-desktop -p /backdrop/screen0/monitorHDMI-1/workspace0/rgba --create -t double -s 0.239216 -s 0.435294 -s 0.635294 -s 1.0
-    xfconf-query -c xfce4-desktop -p /backdrop/screen0/monitoreDP-1/workspace0/rgba --create -t double -s 0.239216 -s 0.435294 -s 0.635294 -s 1.0
-    xfconf-query -c xfce4-desktop -p /backdrop/screen0/monitor0/workspace0/rgba --create -t double -s 0.239216 -s 0.435294 -s 0.635294 -s 1.0
-    xfconf-query -c xfce4-desktop -p /backdrop/screen0/monitorHDMI-1/workspace0/image-style -s 2
-    xfconf-query -c xfce4-desktop -p /backdrop/screen0/monitoreDP-1/workspace0/image-style -s 2
-    xfconf-query -c xfce4-desktop -p /backdrop/screen0/monitor0/workspace0/image-style -s 2
-    xfconf-query -c xfce4-desktop -p /desktop-icons/icon-size -s 32
+Right click on your desktop background (xfdesktop) and click "Desktop settings"
+
+Click on the color box and click on "+" under "Custom".
+
+Paste in this color tag: #3D6FA2 and click "select".
+
+Go into the "Desktop Icons" tab and change the icon size to 32.
+
+Set the "Show icon tooltips: Size:" to 4.
+
+You can optionally set the label background colour to "#3D6FA2".
 
 Append Thunar accel:
 
