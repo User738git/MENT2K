@@ -230,7 +230,9 @@ The script recommends rebooting. If you want to reboot now:
 
 Otherwise log out and log back in (or reboot) to ensure all theme and session changes take effect.
 
-Optional:
+----------
+
+## Optional:
 
 ### Windows CMD font and CMD feel:
 
