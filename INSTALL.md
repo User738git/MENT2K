@@ -178,14 +178,13 @@ You can optionally set the label background colour to "#3D6FA2".
 
     echo '(gtk_accel_path "<Actions>/ThunarWindow/view-location-selector-entry" "true")' >> ~/.config/Thunar/accels
 
-Configure the Thunar toolbar to this screenshot:
+Configure the Thunar toolbar to match this screenshot:
+
 <img src="Screenshots/Thunarconf.png" alt="Thunar">
 
 ----------
 
 Download and optionally install Tahoma fonts:
-When prompted to install (manual steps):
-Download and extract:
 
     wget "www.dafontfree.co/wp-content/uploads/download-manager-files/Tahoma-4styles-Font.zip"
     unzip -o "Tahoma-4styles-Font.zip" -d ./Tahoma-4styles-Font
@@ -246,7 +245,6 @@ Otherwise log out and log back in (or reboot) to ensure all theme and session ch
 
 ### Windows CMD font and CMD feel:
 
-When prompted to install (manual steps):
 Download and extract:
 
     wget "https://www.yohng.com/files/TerminalVector.zip"
