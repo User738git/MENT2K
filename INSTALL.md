@@ -13,6 +13,8 @@
 
 ### Manual installation and configuration steps
 
+> Note: the theme assumes you have installed the XFCE Desktop Environment in advance.
+
 Open a terminal.
 
 Create required directories:
