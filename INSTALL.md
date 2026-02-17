@@ -4,7 +4,7 @@
 
 <!--ts-->
 * [Installing MENT2K](#install_theme)
-* [Optional Steps] (#optional)
+* [Optional Steps](#optional)
 <!--te-->
 
 <a name="install_theme"/>
