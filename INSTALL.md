@@ -156,6 +156,8 @@ Change XFCE desktop background to a solid color and install Background.png:
 
 Right click on your desktop background (xfdesktop) and click "Desktop settings"
 
+Set style to "None".
+
 Click on the color box and click on "+" under "Custom".
 
 Paste in this color tag: #3D6FA2 and click "select".
@@ -165,6 +167,8 @@ Go into the "Desktop Icons" tab and change the icon size to 32.
 Set the "Show icon tooltips: Size:" to 4.
 
 You can optionally set the label background colour to "#3D6FA2".
+
+----------
 
 Append Thunar accel:
 
