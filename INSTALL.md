@@ -174,9 +174,14 @@ You can optionally set the label background colour to "#3D6FA2".
 
 ----------
 
-Append Thunar accel:
+#### Thunar configuration:
 
     echo '(gtk_accel_path "<Actions>/ThunarWindow/view-location-selector-entry" "true")' >> ~/.config/Thunar/accels
+
+Configure the Thunar toolbar to this screenshot:
+<img src="Screenshots/Thunarconf.png" alt="Thunar">
+
+----------
 
 Download and optionally install Tahoma fonts:
 When prompted to install (manual steps):
