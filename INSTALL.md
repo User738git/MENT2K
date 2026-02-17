@@ -238,7 +238,13 @@ Go into "Terminal Preferences" and into the "Appearance" tab.
 
 Pick a font and pick the font "Terminal Vector Normal" and set the value of "Size" to 9.
 
-Add this line of code to the end of your ~/.bashrc file:
+Go to the "General" tab and set Dynamically-set title to "Isn't displayed" and "Initial title" to:
+
+     Administrator: C:
+
+Then set cursor shape to "Underline" and check "Cursor Blinks".
+
+Add this line of code to the end of your .bashrc file (located in ~/):
 
 	function msdos_pwd
 	{
