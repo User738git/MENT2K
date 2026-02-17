@@ -299,5 +299,5 @@ Make it match this image:
 
 > Run most commands as your normal desktop user (not root) except where sudo is explicitly used. If gsettings or xfconf-query commands fail when run from a script or at login, ensure the commands run in your graphical session with DBUS_SESSION_BUS_ADDRESS set. Adjust monitor names in xfconf-query lines to match your system (use xfconf-query -c xfce4-desktop -l to inspect existing properties).
 
-> I (The maintainer of MENT2K) won't take any responbility for broken systems. A restore point is recommended.
+> I (The maintainer of MENT2K) won't take any responbility for broken systems. A restore point is recommended. Install MENT2K at your own risk.
 
