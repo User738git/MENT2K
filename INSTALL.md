@@ -284,6 +284,14 @@ Your terminal should now look something like this:
 
 <img src="Screenshots/Terminal.png" alt="Terminal">
 
+Start menu:
+
+Go to the menu-editor (often called menulibre)
+
+Make it match this image:
+
+<img src="Screenshots/Terminal.png" alt="Terminal">
+*rename "Games" into "Shutdown..." and create a logut shortcut (xfce4-session-logout), rename "Office" into "Help", rename "Accesories" into "Programs".*
 
 > ## Notes and cautions:
 
