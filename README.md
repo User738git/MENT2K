@@ -86,7 +86,7 @@ An uninstall script will be added when I get time.
 
 - Xubuntu, Xfce 4.18.1.
 
-- Mint, don't remember version of Xfce.
+- Mint, 4.18.1.
 
 - In process: Debian 13, Xfce 4.20.
 
