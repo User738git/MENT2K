@@ -14,7 +14,7 @@
 
 ### Manual installation and configuration steps
 
-Open a terminal.
+Open a terminal (Ctrl Alt T).
 
 Create required directories:
 Run:
