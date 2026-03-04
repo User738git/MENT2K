@@ -1,4 +1,4 @@
-<img src="Screenshots/Logo.png" alt="# MENT2K"/>
+<img src="Screenshots/Logo.png" alt="# MENT2K" align="center"/>
 
 ### XFCE / Xubuntu Windows 2000 look and feel.
 ------------------
