@@ -1,17 +1,19 @@
 <p align="center">
 <img src="Screenshots/logo-crop.png" alt="Desktop"/>
 
-### XFCE / Xubuntu Windows 2000 look and feel.
 </p>
 
-------------------
+-----
+
 <p align="center">
 <img src="Screenshots/MENT2K-screenshot.png" alt="Desktop"/>
 </p>
 
-*Click [here](Screenshots/SCREENSHOTS.md) for more screenshots*
+### XFCE / Xubuntu Windows 2000 look and feel.
 
 A fork of the Chicago95 theme which looks like Windows 2000 and focuses on details.
+
+*Click [here](Screenshots/SCREENSHOTS.md) for more screenshots*
 
 ### Included in this theme:
 
