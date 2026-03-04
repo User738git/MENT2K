@@ -1,6 +1,7 @@
 <img src="Screenshots/Logo.png" alt="# MENT2K"/>
-#### XFCE / Xubuntu Windows 2000 look and feel.
 
+### XFCE / Xubuntu Windows 2000 look and feel.
+------------------
 <p align="center">
 <img src="Screenshots/MENT2K-screenshot.png" alt="Desktop"/>
 </p>
