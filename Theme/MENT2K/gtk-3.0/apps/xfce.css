@@ -128,7 +128,7 @@ Launcher / panel positioning helpers
 	margin-right: 7px;
 }
 
-/* Launcher widgets (compact pattern) */
+/* Launcher widgets */
 	widget[id^="launcher-"] {
 	margin-left: -10px;
 	margin-right: 6px;
@@ -136,7 +136,7 @@ Launcher / panel positioning helpers
 }
 
 /* -------------------
-Notification plugin (subtle and welcoming)
+Notification plugin
 ------------------- */
 #xfce4-notification-plugin {
 	border: 1px solid rgba(0, 0, 0, 0.35);
@@ -158,7 +158,7 @@ padding: 20px;
     background: url("../assets/tasktex2.png") 
 }
 
-/* Keep panel plugin buttons neutral and relaxed */
+/* Keeps panel plugin buttons neutral and relaxed */
 .xfce4-panel > widget > frame,
 .xfce4-panel .flat:not(.toggle),
 	#sn-button,
@@ -172,7 +172,7 @@ padding: 20px;
 	background-color: transparent;
 }
 
-/* Hover/active states for panel icons: slightly brighter for friendliness */
+/* Hover/active states for panel icons */
 #showdesktop-button:checked {
 border: 2px solid rgba(0, 0, 0, 0.06);
 border-image: url("../buttons/button_pressed.png");
@@ -209,7 +209,7 @@ background-position: 0 0, 1px 1px;
 	background-color: transparent;
 }
 
-/* Flat buttons look clean and light */
+/* Flat buttons */
 .xfce4-panel .flat:not(.toggle) {
 	color: @panel_fg_color;
 	margin: -1px;
@@ -236,7 +236,7 @@ background-position: 0 0, 1px 1px;
 	padding-top: 12px;
 }
 
-/* Workspace switcher: subtle friendly highlights */
+/* Workspace switcher: subtle highlights */
 wnck-pager {
 	color: white;
 }
@@ -326,23 +326,23 @@ wnck-pager:hover {
 	box-shadow: none;
 }
 
-/* Power manager plugin: softer edges and tidy spacing */
+/* Power manager plugin */
 #xfce4-power-manager-plugin,
 #xfce4-power-manager-plugin:active,
 #xfce4-power-manager-plugin:hover,
 #xfce4-power-manager-plugin:checked {
-box-shadow:
-	inset 1px 4px @border_shade,
-	inset 8px 4px @border_shade,
-	inset 0 -4px @border_bright,
-	inset 7px 0 @bg_color,
-	inset 0 3px @bg_color,
-	inset 0 -3px @bg_color,
-	inset 0 1px @border_bright;
+  box-shadow: 
+  inset 1px 4px @border_shade, 
+  inset 10px 4px @border_shade,  
+  inset 0px -4px @border_bright, 
+  inset 9px 0px @bg_color, 
+  inset 0px 3px @bg_color, 
+  inset -0px -3px @bg_color, 
+  inset 0px 1px @border_bright;
 	margin-top: 0;
 	margin-bottom: -2px;
-	margin-right: -11px;
-	margin-left: -1px;
+	margin-right: -14px;
+	margin-left: 0px;
 	padding-top: 2px;
 	border: none;
 	border-bottom: 1px solid @bg_color;
