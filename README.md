@@ -57,6 +57,10 @@ bash ./install.sh
 
 *Notice: The install-script is an early WP. I (The maintainer of MENT2K) won't take any responbility for broken systems. A restore point is recommended.*
 
+If you are struggling to get a permantent scrollbar, write this into "~/.config/gtk-3.0/settings.ini":
+
+```gtk-overlay-scrolling=true```
+
 ### Manual installation
 
 If you prefer to install MENT2K manually, [Click here](INSTALL.md).
