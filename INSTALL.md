@@ -1,3 +1,9 @@
+<p align="center">
+<img src="Screenshots/logo-install.png" alt="Desktop"/>
+
+</p>
+
+-----
 <a name="index"/>
 
 # Index
