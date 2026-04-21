@@ -14,19 +14,13 @@
    Xfdesktop
 ------------------- */
 
-/*Icon test*/
-XfdesktopIconView,
-XfceDesktop.view,
-XfdesktopIconView.view {
-	margin-left: 100px;
-}
-
 XfdesktopIconView.view {
 	-XfdesktopIconView-ellipsize-icon-labels: 0;
 	-XfdesktopIconView-cell-text-width-proportion: 2.4379;
 	-XfdesktopIconView-cell-padding: -0.999;
 	-XfdesktopIconView-cell-spacing: -10;
 	background: none;
+	background-clip: content-box;
 	margin-left: -10px;
 }
 
@@ -38,7 +32,8 @@ XfdesktopIconView.view:active {
 
 XfdesktopIconView.view .label {
 	text-shadow: none;
-	background: rgba(61,111,162,0.012); 
+	background: rgba(61,111,162,0.012);
+	background-clip: content-box;
 	margin-top: -9px;
 	max-height: 3px;
 	padding: 0;
@@ -128,7 +123,7 @@ Launcher / panel positioning helpers
 	margin-right: 7px;
 }
 
-/* Launcher widgets */
+/* Launcher widgets (compact pattern) */
 	widget[id^="launcher-"] {
 	margin-left: -10px;
 	margin-right: 6px;
@@ -136,7 +131,7 @@ Launcher / panel positioning helpers
 }
 
 /* -------------------
-Notification plugin
+Notification plugin (subtle and welcoming)
 ------------------- */
 #xfce4-notification-plugin {
 	border: 1px solid rgba(0, 0, 0, 0.35);
@@ -158,7 +153,7 @@ padding: 20px;
     background: url("../assets/tasktex2.png") 
 }
 
-/* Keeps panel plugin buttons neutral and relaxed */
+/* Keep panel plugin buttons neutral and relaxed */
 .xfce4-panel > widget > frame,
 .xfce4-panel .flat:not(.toggle),
 	#sn-button,
@@ -236,7 +231,7 @@ background-position: 0 0, 1px 1px;
 	padding-top: 12px;
 }
 
-/* Workspace switcher: subtle highlights */
+/* Workspace switcher: subtle friendly highlights */
 wnck-pager {
 	color: white;
 }
@@ -331,18 +326,18 @@ wnck-pager:hover {
 #xfce4-power-manager-plugin:active,
 #xfce4-power-manager-plugin:hover,
 #xfce4-power-manager-plugin:checked {
-  box-shadow: 
-  inset 1px 4px @border_shade, 
-  inset 10px 4px @border_shade,  
-  inset 0px -4px @border_bright, 
-  inset 9px 0px @bg_color, 
-  inset 0px 3px @bg_color, 
-  inset -0px -3px @bg_color, 
-  inset 0px 1px @border_bright;
+box-shadow:
+	inset 1px 4px @border_shade,
+	inset 8px 4px @border_shade,
+	inset 0 -4px @border_bright,
+	inset 7px 0 @bg_color,
+	inset 0 3px @bg_color,
+	inset 0 -3px @bg_color,
+	inset 0 1px @border_bright;
 	margin-top: 0;
 	margin-bottom: -2px;
-	margin-right: -14px;
-	margin-left: 0px;
+	margin-right: -11px;
+	margin-left: -1px;
 	padding-top: 2px;
 	border: none;
 	border-bottom: 1px solid @bg_color;
@@ -416,7 +411,7 @@ widget#applicationsmenu-2 button box label {
 	padding-top: 2px;
 }
 
-/* Terminal notebook frames: consistent, friendly corners */
+/* Terminal notebook frames */
 #xfce4-terminal-notebook overlay > box,
 #xfce4-terminal-notebook stack > box,
 #xfce4-terminal-notebook stack scrolledwindow {
@@ -694,8 +689,8 @@ wnck-pager {
   box-shadow: inset 1px 4px @border_shade, inset 8px 4px @border_shade,  inset 0px -4px @border_bright, inset 7px 0px @bg_color, inset 0px 3px @bg_color, inset -0px -3px @bg_color, inset 0px 1px @border_bright;
    margin-top: 0;
    margin-bottom: -2px;
-   margin-right: -11px;
-   margin-left: -1px;
+   margin-right: -15px;
+   margin-left: 10px;
    padding-top: 2px;
    border: none;
    border-bottom: 1px solid @bg_color;
@@ -1011,12 +1006,13 @@ wnck-pager {
 #xfce4-power-manager-plugin:active,
 #xfce4-power-manager-plugin:hover,
 #xfce4-power-manager-plugin:checked {
-  box-shadow: inset 1px 4px @border_shade, inset 8px 4px @border_shade,  inset 0px -4px @border_bright, inset 7px 0px @bg_color, inset 0px 3px @bg_color, inset -0px -3px @bg_color, inset 0px 1px @border_bright;
+  box-shadow: inset 1px 4px @border_shade, inset 10px 4px @border_shade,  inset 0px -4px @border_bright, inset 9px 0px @bg_color, inset 0px 3px @bg_color, inset -0px -3px @bg_color, inset 0px 1px @border_bright;
    margin-top: 0;
    margin-bottom: -2px;
    margin-right: -11px;
-   margin-left: -1px;
+   margin-left: 0px;
    padding-top: 2px;
+   padding-left: 0px;
    border: none;
    border-bottom: 1px solid @bg_color;
    border-left: solid inset 4px @bg_color;
