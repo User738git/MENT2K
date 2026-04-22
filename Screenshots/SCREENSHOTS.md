@@ -1,5 +1,8 @@
 ## Screenshots
 
+#### Desktop
+<img src="MENT2K-screenshot.png" alt="Desktop">
+
 #### Solitaire (via Wine):
 <img src="Solitaire.png" alt="Solitaire">
 

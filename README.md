@@ -6,7 +6,7 @@
 -----
 
 <p align="center">
-<img src="Screenshots/MENT2K-screenshot.png" alt="Desktop"/>
+<img src="Screenshots/MENT2K-screenshot-front.png" alt="Desktop"/>
 </p>
 
 ### XFCE / Xubuntu Windows 2000 look and feel.
