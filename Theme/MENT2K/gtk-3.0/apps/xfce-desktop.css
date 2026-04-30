@@ -1,0 +1,51 @@
+
+#xfce4-power-manager-plugin,
+#xfce4-power-manager-plugin:active,
+#xfce4-power-manager-plugin:hover,
+#xfce4-power-manager-plugin:checked {
+box-shadow:
+	inset 0px 4px @border_shade, inset 0px -4px @border_bright, inset 0px 3px @bg_color, inset -0px -3px @bg_color, inset 0px 1px @border_bright;
+	margin-top: 0;
+	min-width: 10px;
+	margin-bottom: -2px;
+	margin-right: -12px;
+	margin-left: -1px;
+	padding-top: 2px;
+	padding: 0;
+	border: none;
+	border-bottom: 1px solid @bg_color;
+	border-left: solid inset 4px @bg_color;
+}
+
+  #xfce4-power-manager-plugin * {
+	    -gtk-icon-style: regular;
+	    -gtk-icon-transform: scale(); 
+}
+
+/* System Tray */
+
+
+
+#XfcePanelWindowWrapper #systray-1 #sn-button, #systray-1 #-snbutton, #systray-1 button {
+	min-width: 20px;
+	padding: 2px;
+}
+
+
+#systray-1, #systray-1 > box, #systray-2 > box, #systray-3 > box, #systray-4 > box, #systray-5 > box, #systray-6 > box, #systray-7 > box,
+#systray-8 > box, #systray-9 > box, #systray-10 > box, #systray-11 > box, #systray-12 > box, #systray-13 > box, #systray-14 >box,
+#systray-15 > box, #systray-16 > box, #systray-17 > box, #systray-18 > box, #systray-19 > box, #systray-20 > box, #systray-21 >box {
+	  box-shadow: 	inset 1px 4px @border_shade,
+	inset 8px 4px @border_shade,
+	inset 0 -4px @border_bright,
+	inset 7px 0 @bg_color,
+	inset 0 3px @bg_color,
+	inset 0 -3px @bg_color,
+	inset 0 1px @border_bright;
+	  margin-top: 0px;
+	  margin-bottom: -2px;
+		padding-left: 8px;
+	  border: none;
+	  border-bottom: 1px solid @bg_color;
+	  border-left:  solid -1px @bg_color;
+}

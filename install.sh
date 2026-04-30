@@ -34,6 +34,7 @@ cp -r Misc/Panel-profiles/MENT2K.tar.bz2 ~/.local/share/xfce4-panel-profiles/MEN
 cp -r "$HOME/.config/xfce4/xfconf/xfce-perchannel-xml/xfce4-panel.xml" "$HOME/.config/menus/menu-backup/xfce4-panel.xml.bak"
 
 # Copy menu shortcut directories
+mkdir ~/.local/share/desktop-directories
 cp -v Misc/xfce-games.directory ~/.local/share/desktop-directories/xfce-games.directory
 cp -v Misc/xfce-office.directory ~/.local/share/desktop-directories/xfce-office.directory
 cp -v Misc/xfce-settings.directory ~/.local/share/desktop-directories/xfce-settings.directory

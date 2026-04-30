@@ -56,11 +56,27 @@
   margin-top: -14px
 }
 
-#content_frame input[type="password"],
-#content_frame input[type="text"] {
+#content_frame label {
+  padding-left: 7px;
+}
+
+#content_frame entry {
+  font-size: 8pt;
+}
+
+#content_frame input[type="password"] {
   background-color: rgba(0, 0, 0, 0);
   border: none;
   color: @button_text_color;
+  font-size: 18pt;
+}
+
+#content_frame entry[type="text"] {
+  background-color: rgba(0, 0, 0, 0);
+  border: none;
+  color: @button_text_color;
+  font-size: 9pt;
+  margin-left: 50px;
 }
 
 #login_window {
@@ -109,3 +125,4 @@ color: azure;
 #window {
 /* Keeping this blank */ }
 
+.lightdm-gtk-greeter #login_window #user_combobox { color: #3c3c3c; font-size: 18px; }
