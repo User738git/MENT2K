@@ -29,12 +29,14 @@ sudo apt update
 sudo apt install -y lxappearance marco mate-control-center mate-tweak gtk2-engines-pixbuf xfce4-panel-profiles picom wget
 
 # Copy panel profiles and menu backups
-mkdir ~/.local/share/xfce4-panel-profiles
+sudo mkdir ~/.local/share/xfce4-panel-profiles/
+
 cp -r Misc/Panel-profiles/MENT2K.tar.bz2 ~/.local/share/xfce4-panel-profiles/MENT2K.tar.bz2
+
 cp -r "$HOME/.config/xfce4/xfconf/xfce-perchannel-xml/xfce4-panel.xml" "$HOME/.config/menus/menu-backup/xfce4-panel.xml.bak"
 
 # Copy menu shortcut directories
-mkdir ~/.local/share/desktop-directories
+sudo mkdir ~/.local/share/desktop-directories
 cp -v Misc/xfce-games.directory ~/.local/share/desktop-directories/xfce-games.directory
 cp -v Misc/xfce-office.directory ~/.local/share/desktop-directories/xfce-office.directory
 cp -v Misc/xfce-settings.directory ~/.local/share/desktop-directories/xfce-settings.directory
@@ -109,13 +111,16 @@ gsettings set org.mate.Marco.general titlebar-font 'Tahoma Bold 8'
 cp -r Misc/Background.png ~/.themes/
 xfconf-query --channel xfce4-desktop --list | grep last-image | xargs xfconf-query -c xfce4-desktop -s ~/.themes/Background.png -p
 
-xfconf-query -c xfce4-desktop -p /backdrop/screen0/monitorHDMI-1/workspace0/rgba --create -t double -s 0.239216 -s 0.435294 -s 0.635294 -s 1.0
-xfconf-query -c xfce4-desktop -p /backdrop/screen0/monitoreDP-1/workspace0/rgba --create -t double -s 0.239216 -s 0.435294 -s 0.635294 -s 1.0
-xfconf-query -c xfce4-desktop -p /backdrop/screen0/monitor0/workspace0/rgba --create -t double -s 0.239216 -s 0.435294 -s 0.635294 -s 1.0
-xfconf-query -c xfce4-desktop -p /backdrop/screen0/monitorHDMI-1/workspace0/image-style -s 2
-xfconf-query -c xfce4-desktop -p /backdrop/screen0/monitoreDP-1/workspace0/image-style -s 2
-xfconf-query -c xfce4-desktop -p /backdrop/screen0/monitor0/workspace0/image-style -s 2
-xfconf-query - xfce4-desktop - /desktop-icons/icon-size -s 32
+xfconf-query -create xfce4-desktop -p /backdrop/screen0/monitorHDMI-1/workspace0/rgba --create -t double -s 0.239216 -s 0.435294 -s 0.635294 -s 1.0
+xfconf-query -create xfce4-desktop -p /backdrop/screen0/monitoreDP-1/workspace0/rgba --create -t double -s 0.239216 -s 0.435294 -s 0.635294 -s 1.0
+xfconf-query -create xfce4-desktop -p /backdrop/screen0/monitor0/workspace0/rgba --create -t double -s 0.239216 -s 0.435294 -s 0.635294 -s 1.0
+xfconf-query -create xfce4-desktop -p /backdrop/screen0/monitorHDMI-1/workspace0/image-style -s 2
+xfconf-query -create xfce4-desktop -p /backdrop/screen0/monitoreDP-1/workspace0/image-style -s 2
+xfconf-query -create xfce4-desktop -p /backdrop/screen0/monitor0/workspace0/image-style -s 2
+
+xfconf-query -create xfce4-desktop -p /desktop-icons/icon-size -s 32
+xfconf-query -s xfce4-desktop -p /desktop-icons/icon-size -s 32
+
 echo '(gtk_accel_path "<Actions>/ThunarWindow/view-location-selector-entry" "true")' >> ~/.config/Thunar/accels
 
 FONT_ZIP_FILE="Tahoma-4styles-Font.zip"
