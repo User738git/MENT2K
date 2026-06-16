@@ -118,8 +118,8 @@ xfconf-query -create xfce4-desktop -p /backdrop/screen0/monitorHDMI-1/workspace0
 xfconf-query -create xfce4-desktop -p /backdrop/screen0/monitoreDP-1/workspace0/image-style -s 2
 xfconf-query -create xfce4-desktop -p /backdrop/screen0/monitor0/workspace0/image-style -s 2
 
-xfconf-query -create xfce4-desktop -p /desktop-icons/icon-size -s 32
-xfconf-query -s xfce4-desktop -p /desktop-icons/icon-size -s 32
+xfconf-query -c xfce4-desktop -p /desktop-icons/icon-size -t int -s 32 --create
+
 
 echo '(gtk_accel_path "<Actions>/ThunarWindow/view-location-selector-entry" "true")' >> ~/.config/Thunar/accels
 
