@@ -20,7 +20,7 @@
 
 ### Manual installation and configuration steps
 
-Open a terminal (Ctrl Alt T).
+Open a terminal in the downloaded MENT2K folder.
 
 Create required directories:
 Run:
