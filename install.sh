@@ -111,9 +111,6 @@ gsettings set org.mate.Marco.general titlebar-font 'Tahoma Bold 8'
 cp -r Misc/Background.png ~/.themes/
 xfconf-query --channel xfce4-desktop --list | grep last-image | xargs xfconf-query -c xfce4-desktop -s ~/.themes/Background.png -p
 
-xfconf-query -create xfce4-desktop -p /backdrop/screen0/monitorHDMI-1/workspace0/rgba --create -t double -s 0.239216 -s 0.435294 -s 0.635294 -s 1.0
-xfconf-query -create xfce4-desktop -p /backdrop/screen0/monitoreDP-1/workspace0/rgba --create -t double -s 0.239216 -s 0.435294 -s 0.635294 -s 1.0
-xfconf-query -create xfce4-desktop -p /backdrop/screen0/monitor0/workspace0/rgba --create -t double -s 0.239216 -s 0.435294 -s 0.635294 -s 1.0
 xfconf-query -create xfce4-desktop -p /backdrop/screen0/monitorHDMI-1/workspace0/image-style -s 2
 xfconf-query -create xfce4-desktop -p /backdrop/screen0/monitoreDP-1/workspace0/image-style -s 2
 xfconf-query -create xfce4-desktop -p /backdrop/screen0/monitor0/workspace0/image-style -s 2
@@ -168,6 +165,10 @@ restart() {
 sudo reboot
 }
 
+manual_steps() {
+  xdg-open INSTALL.md
+}
+
 # Main script execution
 clear
 printf ''
@@ -187,7 +188,7 @@ esac
 
 
 if grep -qi '^ID=debian' /etc/os-release; then
-  echo "Debian"
+  echo "Debian detected. Installing Debian components..."
   debian_lightdm
 fi
 
@@ -225,6 +226,22 @@ case "$confirm" in
   y|Y)
     echo "rebooting in a few seconds..."
     restart
+    ;;
+  *)
+    echo "Not rebooting."
+    exit
+    ;;
+esac
+
+clear
+sleep 3
+printf ''
+printf 'Some manual steps remain (including optional). Open remaining instructions? (Y/n)'
+read -r confirm
+case "$confirm" in
+  y|Y)
+    echo "opening remaining steps..."
+    manual_steps
     ;;
   *)
     echo "Not rebooting."
