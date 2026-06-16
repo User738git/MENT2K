@@ -129,6 +129,11 @@ PROJECT_FOLDER="$(pwd)"
 FONT_FILES="TAHOMA_0.TTF" "TAHOMAB0.TTF" "TAHOMABD.TTF" "Tahoma Regular font.ttf"
 SYSTEM_FONT_DIR="/usr/local/share/fonts/tahoma"
 
+debian_lightdm() {
+  sudo cp -v "Misc/debian/lightdm-gtk-greeter.css" "/usr/share/themes/MENT2K/gtk-3.0/apps/lightdm-gtk-greeter.css"
+  cp -v "Misc/debian/lightdm-gtk-greeter.css" "~/.themes/MENT2K/gtk-3.0/apps/lightdm-gtk-greeter.css"
+}
+
 download_and_extract_font() {
   echo "Downloading $FONT_ZIP_FILE..."
   wget "https://www.dafontfree.co/wp-content/uploads/download-manager-files/Tahoma-4styles-Font.zip"
@@ -179,6 +184,12 @@ case "$confirm" in
     ;;
 esac
 
+
+if grep -qi '^ID=debian' /etc/os-release; then
+  echo "Detected Debian. Installing Debian components..."
+  debian_lightdm()
+fi
+
 sudo mv -- /etc/lightdm/lightdm-gtk-greeter.conf /etc/lightdm/lightdm-gtk-greeter.conf.bak
 sudo cp -r Lightdm/lightdm-gtk-greeter.conf /etc/lightdm/
 
@@ -221,6 +232,7 @@ case "$confirm" in
 esac
 
 clear
+sleep 3
 printf ''
 printf 'A reboot is recommended to make everything look correctly. Do you want to reboot now? (Y/n)'
 read -r confirm
