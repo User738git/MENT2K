@@ -220,7 +220,7 @@ echo "Installation and configuration complete."
 sleep 1.5
 clear
 printf '\n'
-printf 'Some manual steps remain (including optional). Open remaining instructions? (Y/n)'
+printf '\nSome manual steps remain (including optional). Open the remaining instructions and go to "Optional Steps"? (Y/n) '
 read -r confirm
 case "$confirm" in
   y|Y)
@@ -238,7 +238,7 @@ clear
 sleep 1
 clear
 printf '\n'
-printf 'A reboot is recommended to make everything look correctly. Do you want to reboot now? (Y/n)'
+printf 'A reboot is recommended to make everything look correctly. Do you want to reboot now? (Y/n) '
 read -r confirm
 case "$confirm" in
   y|Y)
