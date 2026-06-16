@@ -306,7 +306,7 @@ Make it match this image:
 
 *rename "Games" into "Shutdown..." and create a logut shortcut (xfce4-session-logout), rename "Office" into "Help", rename "Accesories" into "Programs".*
 
-### *Tip*: The start menu is resizable (Both X and Y). This is a important function people tend to forget.
+#### *Quick Tip*: The start menu is resizable (Both X and Y). This is a important function people tend to forget.
 
 <img src="Screenshots/Resize.png">
 
