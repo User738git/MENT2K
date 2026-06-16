@@ -305,11 +305,13 @@ Make it match this image:
 <img src="Screenshots/Menulibre.png" alt="Menu">
 
 *rename "Games" into "Shutdown..." and create a logut shortcut (xfce4-session-logout), rename "Office" into "Help", rename "Accesories" into "Programs".*
+
 <img src="Screenshots/Resize.png">
 
-:::color #ff0000
+<p style="color: red">
 * Tip: The start menu is resizable. This is a important function people tend to forget.
 :::
+</p>
 
 > ## Notes and cautions:
 
