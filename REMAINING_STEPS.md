@@ -89,13 +89,20 @@ Your terminal should now look something like this:
 
 ### Start menu:
 
-Go to the menu-editor (often called menulibre)
+
+Go to the **menu-editor** (often called menulibre)
 
 Make it match this image:
 
 <img src="Screenshots/Menulibre.png" alt="Menu">
 
-*rename "Games" into "Shutdown..." and create a logut shortcut (xfce4-session-logout), rename "Office" into "Help", rename "Accesories" into "Programs".*
+*rename "Games" into "Shutdown...", rename "Office" into "Help", rename "Accesories" into "Programs".*
+
+Open the **whisker menu settings** (by right-clicking the start-button and clicking "**Properties**") and check these options:
+
+<img src="Screenshots/check.png">
+
+<img src="Screenshots/check2.png">
 
 #### *Quick Tip*: The start menu is resizable (Both X and Y). This is an important function people tend to forget.
 
