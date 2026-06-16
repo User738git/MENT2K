@@ -244,8 +244,7 @@ case "$confirm" in
     manual_steps
     ;;
   *)
-    echo "Not rebooting."
-    exit
+    
     ;;
 esac
 
