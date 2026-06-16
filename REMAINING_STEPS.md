@@ -36,8 +36,6 @@ You can optionally set the label background colour to "#3D6FA2".
 
 #### Thunar configuration:
 
-    echo '(gtk_accel_path "<Actions>/ThunarWindow/view-location-selector-entry" "true")' >> ~/.config/Thunar/accels
-
 Configure the Thunar toolbar to match this screenshot:
 
 <img src="Screenshots/Thunarconf.png" alt="Thunar">
