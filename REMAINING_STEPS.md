@@ -8,7 +8,7 @@
 <a name="index"/>
 
 ## Index
-------
+
 <!--ts-->
 * [Remaining steps](#install_theme)
 * [Optional Steps](#optional)
