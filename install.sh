@@ -166,7 +166,7 @@ sudo reboot
 }
 
 manual_steps() { 
-  xdg-open INSTALL.md 
+  xdg-open REMAINING_STEPS.md 
 }
 
 # Main script execution
