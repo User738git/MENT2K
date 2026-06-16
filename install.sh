@@ -166,7 +166,9 @@ sudo reboot
 }
 
 manual_steps() {
-  xdg-open INSTALL.md
+  tmp="$(mktemp -t install.XXXX).html"
+  pandoc INSTALL.md -o "$tmp"
+  xdg-open "$tmp#optional"
 }
 
 # Main script execution
@@ -220,7 +222,7 @@ echo "Installation and configuration complete."
 sleep 1.5
 clear
 printf '\n'
-printf '\nSome manual steps remain (including optional). Open remaining instructions? (Y/n)'
+printf 'Some manual steps remain (including optional). Open remaining instructions? (Y/n)'
 read -r confirm
 case "$confirm" in
   y|Y)
@@ -238,7 +240,7 @@ clear
 sleep 1
 clear
 printf '\n'
-printf '\nA reboot is recommended to make everything look correctly. Do you want to reboot now? (Y/n)'
+printf 'A reboot is recommended to make everything look correctly. Do you want to reboot now? (Y/n)'
 read -r confirm
 case "$confirm" in
   y|Y)
