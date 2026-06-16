@@ -218,22 +218,6 @@ picom --config ~/.config/picom.conf &
 echo "Installation and configuration complete."
 
 clear
-sleep 2
-printf ''
-printf 'A reboot is recommended to make everything look correctly. Do you want to reboot now? (Y/n)'
-read -r confirm
-case "$confirm" in
-  y|Y)
-    echo "rebooting in a few seconds..."
-    restart
-    ;;
-  *)
-    echo "Not rebooting."
-    exit
-    ;;
-esac
-
-clear
 sleep 3
 printf ''
 printf 'Some manual steps remain (including optional). Open remaining instructions? (Y/n)'
