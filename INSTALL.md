@@ -46,6 +46,11 @@ Update lightdm greeter CSS file (sudo):
 
     sudo cp -v Lightdm/lightdm-gtk-greeter.css /usr/share/themes/MENT2K/gtk-3.0/apps/lightdm-gtk-greeter.css
 
+### If on Debian, use these commands instead:
+
+    sudo cp -v Misc/debian/lightdm-gtk-greeter.css /usr/share/themes/MENT2K/gtk-3.0/apps/lightdm-gtk-greeter.css
+    cp -v Misc/debian/lightdm-gtk-greeter.css ~/.themes/MENT2K/gtk-3.0/apps/lightdm-gtk-greeter.css
+
 Install required packages (Debian/Ubuntu):
 
     sudo apt update
@@ -238,7 +243,7 @@ Restart picom:
     picom --config ~/.config/picom.conf &
 
 Final steps:
-The script recommends rebooting. If you want to reboot now:
+A reboot is recommended. If you want to reboot now:
 
     sudo reboot
 

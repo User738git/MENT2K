@@ -165,10 +165,8 @@ restart() {
 sudo reboot
 }
 
-manual_steps() {
-  tmp="$(mktemp -t install.XXXX).html"
-  pandoc INSTALL.md -o "$tmp"
-  xdg-open "$tmp#optional"
+manual_steps() { 
+  xdg-open INSTALL.md 
 }
 
 # Main script execution
