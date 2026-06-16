@@ -187,8 +187,8 @@ esac
 
 
 if grep -qi '^ID=debian' /etc/os-release; then
-  echo "Detected Debian. Installing Debian components..."
-  debian_lightdm()
+  echo "Debian"
+  debian_lightdm
 fi
 
 sudo mv -- /etc/lightdm/lightdm-gtk-greeter.conf /etc/lightdm/lightdm-gtk-greeter.conf.bak
