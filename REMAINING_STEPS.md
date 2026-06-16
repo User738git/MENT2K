@@ -5,6 +5,15 @@
 -----
 # Remaining Steps:
 
+<a name="index"/>
+
+# Index
+
+<!--ts-->
+* [Installing MENT2K](#install_theme)
+* [Optional Steps](#optional)
+<!--te-->
+
 <a name="optional"/>
 
 ## Optional:
