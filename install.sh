@@ -130,6 +130,7 @@ FONT_FILES="TAHOMA_0.TTF" "TAHOMAB0.TTF" "TAHOMABD.TTF" "Tahoma Regular font.ttf
 SYSTEM_FONT_DIR="/usr/local/share/fonts/tahoma"
 
 debian_lightdm() {
+  sleep 3
   sudo cp -v "Misc/debian/lightdm-gtk-greeter.css" "/usr/share/themes/MENT2K/gtk-3.0/apps/lightdm-gtk-greeter.css"
   cp -v "Misc/debian/lightdm-gtk-greeter.css" "~/.themes/MENT2K/gtk-3.0/apps/lightdm-gtk-greeter.css"
 }
