@@ -39,7 +39,7 @@
  * login window *
  ****************/
 #content_frame {
-  border: 1px solid;
+  border: 0px solid;
   color: @button_text_color;
   font-size: 74%;
   font-family: Tahoma;
@@ -47,7 +47,7 @@
   border-top: 100px solid;
   border-image: url("../assets/branding-main.png");
   border-image-slice: 0 0 0 0;
-  border-right: 147px solid;
+  border-right: 148px solid;
   border-right-color: @border_dark;
   border-left-color: @border_bright;
   border-bottom: none;
@@ -80,13 +80,10 @@
 }
 
 #login_window {
-  border: 1px solid;
   color: #fff;
   outline-color: @outline_color;
   border-top: none;
-  border-right-color: @border_dark;
-  border-left-color: @border_bright;
-  border-bottom: none;
+  border-right: solid 1px @border_dark;
   background-color: transparent;
   box-shadow: inset -1px -2px @border_shade, inset 0px 0px @border_light, inset 0px -1px black;
   background: url("../assets/branding-login-main.png");
@@ -103,7 +100,7 @@ color: azure;
 }
 
 #buttonbox_frame {
-  padding-top: 0px;
+  padding-left: 0px;
   padding-bottom: 0;
   border-style: none;
   background-color: transparent;
