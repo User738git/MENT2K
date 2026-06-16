@@ -217,9 +217,9 @@ picom --config ~/.config/picom.conf &
 
 echo "Installation and configuration complete."
 
-sleep 2
+sleep 1.5
 clear
-printf ''
+print ''
 printf 'Some manual steps remain (including optional). Open remaining instructions? (Y/n)'
 read -r confirm
 case "$confirm" in
@@ -237,7 +237,7 @@ clear
 
 sleep 1
 clear
-printf ''
+print ''
 printf 'A reboot is recommended to make everything look correctly. Do you want to reboot now? (Y/n)'
 read -r confirm
 case "$confirm" in
