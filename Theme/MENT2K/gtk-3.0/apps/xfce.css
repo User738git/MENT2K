@@ -319,7 +319,7 @@ wnck-pager:hover {
 	box-shadow: none;
 }
 
-xfce4-panel .vertical .tasklist .toggle label {
+.xfce4-panel .vertical .tasklist .toggle label {
 	margin-top: -7px; }
 
   .xfce4-panel:not(.vertical) .tasklist .toggle label {

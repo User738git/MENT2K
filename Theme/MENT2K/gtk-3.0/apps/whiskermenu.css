@@ -166,6 +166,33 @@ whiskermenu-window {
     caret-color: transparent;
    }
 
+#whiskermenu-window .commands-area {
+	margin-left: 10px;
+	margin-right: -10px;
+	border: none;
+	box-shadow: none;
+}
+
+#whiskermenu-window .commands-area button {
+	padding: 0px 52px;
+	margin-top: -21px;
+	margin-bottom: 14px;
+	border: none;
+	box-shadow: none;
+}
+
+#whiskermenu-window .commands-area button:hover {
+	background-color: rgba(0, 0, 80, 0.6);
+}
+
+#whiskermenu-window .commands-area image {
+	display: none
+}
+
+.commands-area button image {
+  opacity: 0;
+}
+
   #whiskermenu-window scrollbar button {
     margin: 0px;
     padding: 0px;
