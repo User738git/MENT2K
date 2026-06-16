@@ -219,6 +219,7 @@ echo "Installation and configuration complete."
 
 sleep 1.5
 clear
+printf '\n'
 printf '\nSome manual steps remain (including optional). Open remaining instructions? (Y/n)'
 read -r confirm
 case "$confirm" in
@@ -236,6 +237,7 @@ clear
 
 sleep 1
 clear
+printf '\n'
 printf '\nA reboot is recommended to make everything look correctly. Do you want to reboot now? (Y/n)'
 read -r confirm
 case "$confirm" in
