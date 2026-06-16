@@ -3,12 +3,12 @@
 </p>
 
 -----
-## Remaining Steps:
+# Remaining Steps:
 
 <a name="index"/>
 
-# Index
-
+## Index
+------
 <!--ts-->
 * [Remaining steps](#install_theme)
 * [Optional Steps](#optional)
