@@ -15,6 +15,7 @@
 <!--te-->
 
 ## Remaining manual steps:
+Sorry if you wanted a fully automated install script, sadly there is not a command for everything (as I know).
 
 #### Desktop options:
 
