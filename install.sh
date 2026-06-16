@@ -232,8 +232,12 @@ case "$confirm" in
     ;;
 esac
 
+sleep 1
+
 clear
-sleep 3
+
+sleep 1
+clear
 printf ''
 printf 'A reboot is recommended to make everything look correctly. Do you want to reboot now? (Y/n)'
 read -r confirm
