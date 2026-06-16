@@ -16,11 +16,6 @@
 
 ## Remaining manual steps:
 
-Change XFCE desktop background to a solid color and install Background.png:
-
-    cp -r Misc/Background.png ~/.themes/
-    xfconf-query --channel xfce4-desktop --list | grep last-image | xargs -r xfconf-query -c xfce4-desktop -s ~/.themes/Background.png -p
-
 #### Desktop options:
 
 Right click on your desktop background (xfdesktop) and click "Desktop settings"
