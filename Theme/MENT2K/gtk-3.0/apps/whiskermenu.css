@@ -215,8 +215,11 @@ whiskermenu-window {
     #whiskermenu-window .search-area {
       margin: -10px;
       min-height: 0px;
-
     }
+
+  #whiskermenu-window .search {
+    opacity: 0;
+  }
 
     #whiskermenu-window grid {
       margin-bottom: -6px

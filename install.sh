@@ -220,7 +220,7 @@ echo "Installation and configuration complete."
 sleep 1.5
 clear
 printf '\n'
-printf '\nSome manual steps remain (including optional). Open the remaining instructions and go to "Optional Steps"? (Y/n) '
+printf '\nSome manual steps remain (including optional).\nWould you like to open the instructions for the remaining steps? (Y/n) '
 read -r confirm
 case "$confirm" in
   y|Y)
