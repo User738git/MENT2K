@@ -15,7 +15,7 @@
 <!--te-->
 
 ## Remaining manual steps:
-Sorry if you wanted a fully automated install script, sadly there is not a command for everything (as I know).
+Sorry if you wanted a fully automated install script. Sadly, some steps require device- or vendor-specific commands or identifiers that aren’t universally available, and my knowledge is limited for very niche or undocumented commands, so those parts must be handled manually.
 
 #### Desktop options:
 
