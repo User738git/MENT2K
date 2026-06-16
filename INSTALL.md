@@ -308,10 +308,7 @@ Make it match this image:
 
 <img src="Screenshots/Resize.png">
 
-<p style="color: red">
-* Tip: The start menu is resizable. This is a important function people tend to forget.
-:::
-</p>
+### Tip: The start menu is resizable. This is a important function people tend to forget.
 
 > ## Notes and cautions:
 
