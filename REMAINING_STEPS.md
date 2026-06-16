@@ -1,9 +1,9 @@
 <p align="center">
-<img src="Screenshots/Logo.png" alt="Logo"/>
+<img src="Screenshots/logo-crop.png" alt="Logo"/>
 </p>
 
 -----
-# Remaining Steps:
+## Remaining Steps:
 
 <a name="index"/>
 
