@@ -97,6 +97,10 @@ Make it match this image:
 
 *rename "Games" into "Shutdown..." and create a logut shortcut (xfce4-session-logout), rename "Office" into "Help", rename "Accesories" into "Programs".*
 
+#### *Quick Tip*: The start menu is resizable (Both X and Y). This is an important function people tend to forget.
+
+<img src="Screenshots/Resize.png">
+
 > ## Notes and cautions:
 
 > Run most commands as your normal desktop user (not root) except where sudo is explicitly used. If gsettings or xfconf-query commands fail when run from a script or at login, ensure the commands run in your graphical session with DBUS_SESSION_BUS_ADDRESS set. 
