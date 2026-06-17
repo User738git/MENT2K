@@ -47,7 +47,7 @@
   border-top: 100px solid;
   border-image: url("../assets/branding-main.png");
   border-image-slice: 0 0 0 0;
-  border-right: 148px solid;
+  border-right: 231px solid;
   border-right-color: @border_dark;
   border-left-color: @border_bright;
   border-bottom: none;
@@ -62,6 +62,8 @@
 
 #content_frame entry {
   font-size: 8pt;
+  padding-right: 5px;
+  margin-right: -169px;
 }
 
 #content_frame input[type="password"] {
@@ -100,12 +102,16 @@ color: azure;
 }
 
 #buttonbox_frame {
-  padding-left: 0px;
+  padding-top: 0px;
   padding-bottom: 0;
   border-style: none;
   background-color: transparent;
   background-image: none;
   box-shadow: none; }
+
+#buttonbox_frame button {
+	padding: 3px 8px;  
+}
 
 /********************
  * password warning *
