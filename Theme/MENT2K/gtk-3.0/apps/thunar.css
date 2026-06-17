@@ -149,10 +149,7 @@ ThunarTreeView {
 } 
 
 .thunar entry {
-    padding-bottom: 0px;
-    margin: 0px;
-    margin-bottom: 1px;
-    min-height: 10px
+	margin: 1px 0 2px;
 }
 
 
@@ -216,3 +213,22 @@ ThunarTreeView {
   border-right: 1px solid @light_shadow;
   border-radius: 0px;
   box-shadow: 1px 1px @borders inset, -1px -1px @theme_bg_color inset; }
+
+/* For later use (perhaps)?
+
+.thunar entry {
+	margin: 40px 0 3px -100px;
+}
+
+.thunar toolbar {
+
+  padding: 0px 8px 1px;
+  background-repeat: no-repeat;
+  border-top: 1px solid @bg_bright;
+  margin-top: -18px;
+  min-height: 10px;
+  max-height: 10px;
+  margin-left: 1px;
+  box-shadow: -1px -1px @bg_shade,  -2px -2px @bg_shade inset, -1px -1px white inset;}
+
+*/
