@@ -58,6 +58,7 @@
 
 #content_frame entry{
   font-size: 8pt;
+  margin-right: -30px;
 }
 
 #content_frame input[type="password"],
@@ -95,7 +96,8 @@ color: azure;
   border-style: none;
   background-color: transparent;
   background-image: none;
-  box-shadow: none; }
+  box-shadow: none; 
+}
 
 /********************
  * password warning *

@@ -82,7 +82,7 @@ whiskermenu-window {
     padding-bottom: 1px;
   background-color: @selected_bg_color; }
   #whiskermenu-window button {
-    padding: 1px;
+    padding: 0px;
     min-height: 16px;
     min-width: 16px; }
     #whiskermenu-window button:not(:hover):not(:checked) {
@@ -91,6 +91,7 @@ whiskermenu-window {
       background-color: transparent; }
   #whiskermenu-window frame border {
     padding: 0px;
+    margin: 0 -4px -4px -5px;
     border: none;
     border-image: none;
     box-shadow: none; }
@@ -136,11 +137,17 @@ whiskermenu-window {
     background-position: 0% 100%; }
     #whiskermenu-window frame > stack,
     #whiskermenu-window frame > box { /* frame > box is for older versions of Whisker menu. */
-      margin-left: 18px; }
+      margin-left: 18px;
+ }
     #whiskermenu-window frame scrolledwindow button {
-      border: 1px solid transparent;
+      border: 0px solid transparent;
       background-color: @selected_bg_color;
       box-shadow: none; }
+    #whiskermenu-window frame scrolledwindow button box {
+      padding: 3px 5px;
+}
+    #whiskermenu-window frame scrolledwindow button box image {
+      padding: 0 10px 0 0;}
       #whiskermenu-window frame scrolledwindow button:checked {
       background-color: @border_shade; }
       #whiskermenu-window frame scrolledwindow button:hover,
@@ -173,9 +180,9 @@ whiskermenu-window {
 	box-shadow: none;
 }
 
-#whiskermenu-window .commands-area button {
-	padding: 0px 52px;
-	margin-top: -21px;
+#whiskermenu-window .commands-area button, #whiskermenu-window .commands-area button:active {
+	padding: 0px 62px;
+	margin-top: -24px;
 	margin-bottom: 14px;
 	border: none;
 	box-shadow: none;
@@ -183,14 +190,12 @@ whiskermenu-window {
 
 #whiskermenu-window .commands-area button:hover {
 	background-color: rgba(0, 0, 80, 0.6);
+
 }
 
 #whiskermenu-window .commands-area image {
-	display: none
-}
-
-.commands-area button image {
-  opacity: 0;
+	display: none;
+        opacity: 0;
 }
 
   #whiskermenu-window scrollbar button {
@@ -215,11 +220,8 @@ whiskermenu-window {
     #whiskermenu-window .search-area {
       margin: -10px;
       min-height: 0px;
-    }
 
-  #whiskermenu-window .search {
-    opacity: 0;
-  }
+    }
 
     #whiskermenu-window grid {
       margin-bottom: -6px
