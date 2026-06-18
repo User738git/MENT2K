@@ -47,7 +47,7 @@
   border-top: 100px solid;
   border-image: url("../assets/branding-main.png");
   border-image-slice: 0 0 0 0;
-  border-right: 108px solid;
+  border-right: 110px solid;
   border-right-color: @border_dark;
   border-left-color: @border_bright;
   border-bottom: none;
