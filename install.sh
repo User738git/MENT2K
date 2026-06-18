@@ -25,6 +25,8 @@ sudo cp -r Icons/Idk2k "/usr/share/icons/"
 sudo cp -v "Lightdm/lightdm-gtk-greeter.css" "/usr/share/themes/MENT2K/gtk-3.0/apps/lightdm-gtk-greeter.css"
 
 # Install necessary packages
+echo "Installing dependencies..."
+sleep 0.4
 sudo apt update
 sudo apt install -y lxappearance marco mate-control-center mate-tweak gtk2-engines-pixbuf xfce4-panel-profiles picom wget unzip
 
