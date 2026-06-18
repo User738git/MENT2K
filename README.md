@@ -81,7 +81,7 @@ An uninstall script will be added when I get time.
 ### Start menu
 <img src="Screenshots/Start-menu.png" alt="Start menu">
 
-### Login screen
+### Login screen (Debian)
 <img src="Screenshots/Logon.png" alt="Start menu">
 
 ### Thunar top bar
