@@ -26,7 +26,7 @@ sudo cp -v "Lightdm/lightdm-gtk-greeter.css" "/usr/share/themes/MENT2K/gtk-3.0/a
 
 # Install necessary packages
 sudo apt update
-sudo apt install -y lxappearance marco mate-control-center mate-tweak gtk2-engines-pixbuf xfce4-panel-profiles picom wget
+sudo apt install -y lxappearance marco mate-control-center mate-tweak gtk2-engines-pixbuf xfce4-panel-profiles picom wget unzip
 
 # Copy panel profiles and menu backups
 sudo mkdir ~/.local/share/xfce4-panel-profiles/
