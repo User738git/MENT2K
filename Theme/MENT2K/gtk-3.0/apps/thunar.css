@@ -2,166 +2,265 @@
  * Thunar *
  **********/
 
-/*Contributor notes:
-Please use two space indentions.
-Stack all related and child selectors and selector states into a logical hierarchy to a readable degree.
-Make sure that all changes made here are part of the Thunar application.
-*/
+/* Contributor notes:
+ * Please use two space indentions.
+ * Stack all related and child selectors and selector states into a logical hierarchy to a readable degree.
+ * Make sure that all changes made here are part of the Thunar application.
+ */
 
 .thunar #location-toolbar toolbutton button:not(:hover):not(:checked):not(:active),
 .thunar #location-toolbar #back button:not(:hover):not(:checked):not(:active),
 .thunar #location-toolbar #forward button:not(:hover):not(:checked):not(:active) {
   border-color: transparent;
   border-image: none;
-  box-shadow: none; }
+  box-shadow: none;
+}
+
 .thunar #location-toolbar toolbutton button:disabled {
   background-color: @border_bright;
   background-image: linear-gradient(45deg, @bg_color 25%, transparent 25%, transparent 75%, @bg_color 75%, @bg_color), linear-gradient(45deg, @bg_color 25%, transparent 25%, transparent 75%, @bg_color 75%, @border_dark);
   background-size: 2px 2px;
-  background-position: 0 0, 1px 1px; }
+  background-position: 0 0, 1px 1px;
+}
 
 .thunar #location-toolbar .path-bar button {
   min-height: 16px;
   min-width: 16px;
   padding: 0px;
   padding-left: 1px;
-  padding-right: 1px; }
-  .thunar #location-toolbar .path-bar button image {
-    margin-top: -2px;
-    margin-bottom: -2px; }
+  padding-right: 1px;
+}
+
+.thunar #location-toolbar .path-bar button image {
+  margin-top: -2px;
+  margin-bottom: -2px;
+}
 
 .thunar toolbar toolitem entry image.left {
-  padding: 0 1px;
-  margin-right: 4px; 
+  padding: 0 0px;
+  margin-right: 3px;
+  margin-left: -1px;
 }
 
 .thunar toolbar toolbutton button {
   padding: 0 0px;
-  margin: 0px; 
-  margin-bottom: 1px;
-  min-height: 16px
+  margin: 0px;
+  margin-top: -1px;
+  min-height: 10px;
+}
+
+.thunar toolbar toolbutton button:hover {
+  border: none;
+  background: none;
+}
+
+.thunar paned {
+  margin-top: 1px;
+  margin-right: -3px;
+  margin-left: -1px;
+}
+
+.thunar window grid {
+  background: transparent;
+}
+
+.thunar paned separator {
+  background: @bg_color;
+  padding-left: 0px;
+  margin-left: -3px;
+  margin-right: 2px;
+  border: none;
+  /* box-shadow: -2px 0px  @bg_shade inset, -1px 0px  @bg_dark inset; */
 }
 
 .thunar toolbar {
   background-image: url("../assets/handlewhitebig.png");
-  padding: 0px 8px 1px;
+  padding: 0px 12px 1px;
   background-repeat: no-repeat;
-  border-top: 1px solid @bg_bright;
-  margin-top: 1px;
-  min-height: 10px;
-  max-height: 10px;
+  margin-top: 0px;
+  min-height: 8px;
+  max-height: 8px;
   margin-left: 1px;
-  box-shadow: -1px -1px @bg_shade,  -2px -2px @bg_shade inset, -1px -1px white inset;}
-  
+  box-shadow: -1px -1px @bg_shade, 1px 1px white inset, -2px -2px @bg_shade inset, -1px -1px white inset;
+}
+
 .toolbar-cover-frame {
   margin: 0px;
   border-color: transparent;
-  background-color: transparent; }
+  background-color: transparent;
+}
 
 .thunar menubar {
-    max-height: 20px; 
-    background-image: url("../assets/handlewhite.png"); 
-    background-repeat: no-repeat; /* Without this, the whole menubar will have the "handle1" texture. */
-    padding: 0px;
-    padding-left: 13px;
-    margin-left: 1px;
-    margin-top: 1px;
-    border-top: 1px solid @bg_bright;
-    box-shadow: -1px -1px @bg_shade, 2px 1px @bg_bright, -1px 1px @bg_shade
-}
-    
-
-/*  You can enable the spin button theme by uncommenting the following! */
-    .thunar menubar > menuitem:last-child {
-      background-color: black;
-      border-left: 1px solid @bg_bright;
-      border-right: 2px solid @bg_shade;
-      box-shadow: inset 0px -4px @bg_dark, -1px 0px @bg_shade;
-      min-width: 38px;
-      min-height: 10px !important;
-      background-image: url("../assets/status_badge_msw.png");
-      background-repeat: no-repeat;
-      background-position: center;
-      background-size: 104.6%;
-      padding-top: 0;
-      padding-left: 0px;
-      padding-right: 0px;
-      margin-top: -1px;
- }
-
-    .thunar menuitem {
-      margin: -1px;
-      padding: 0px 8px;
-
- }
-.thunar > grid > toolbar * { -gtk-icon-transform: scale(1); }
-.thunar notebook .standard-view {
+  min-height: 0px;
+  background-image: url("../assets/handlewhite.png");
+  background-repeat: no-repeat; /* Without this, the whole menubar will have the "handle1" texture. */
   padding: 0px;
-  border-top: 2px solid @border_dark;
-  border-bottom: 2px solid @border_dark;
-  border-left: 2px solid @border_dark;
+  padding-left: 10px;
+  margin-left: 1px;
+  margin-top: 1px;
+  border-top: 1px solid @bg_bright;
+  box-shadow: -1px -1px 0 @bg_shade, 1px 0px @bg_bright, -0px 0px @bg_shade;
+}
+
+/* You can enable the spin button theme by uncommenting the following! */
+.thunar menubar > menuitem:last-child {
+  background-color: black;
+  border-left: 1px solid @bg_bright;
+  border-right: 3px solid @bg_bright;
+  box-shadow: inset 4px -1px @bg_dark, -1px 0px @bg_shade;
+  min-width: 38px;
+  min-height: 10px !important;
+  background-image: url("../assets/status_badge_msw.png");
+  background-repeat: no-repeat;
+  background-color: black;
+  background-position: center;
+  background-size: 100%;
+  padding-top: 0;
+  padding-left: 0px;
+  padding-right: 0px;
+  margin-top: 0px;
+}
+
+.thunar menuitem {
+  margin: -2px;
+  padding: 0px 10px;
+}
+
+.thunar > grid > toolbar * {
+  -gtk-icon-transform: scale(1);
+}
+
+.thunar notebook .standard-view {
+  padding: 1px;
+  padding-top: 0px;
+  border-top: 1px solid @border_dark;
+  border-bottom: 1px solid @border_dark;
+  border-left: 22px solid @border_dark;
   border-right: 2px solid @border_dark;
   border-image: url("../assets/frame_inset.png");
   border-image-slice: 2 2 2 2;
-  box-shadow: none; }
+  box-shadow: 1px -1px @border_dark inset, -1px -1px @bg_color inset;
+}
+
 .thunar notebook header tabs tab {
-  padding: 0px; }
-  .thunar notebook header tabs tab box {
-    padding: 0px;
-    margin-top: -2px;
-    margin-bottom: -2px; }
-  .thunar notebook header tabs tab button {
-    background: none;
-    border: none;
-    box-shadow: none; }
-    .thunar notebook header tabs tab button image {
-      padding: 0px;
-      margin-top: -1px;
-      margin-bottom: -2px; }
-      
-    .thunar * { font-weight: 100 }
-    XfdesktopIconView.view { font-weight: 100 }
+  padding: 0px;
+}
+
+.thunar notebook header tabs tab box {
+  padding: 0px;
+  margin-top: -2px;
+  margin-bottom: -2px;
+}
+
+.thunar notebook header tabs tab button {
+  background: none;
+  border: none;
+  box-shadow: none;
+}
+
+.thunar notebook header tabs tab button image {
+  padding: 0px;
+  margin-top: -1px;
+  margin-bottom: -2px;
+}
+
+.thunar * {
+  font-weight: 100;
+}
+
+XfdesktopIconView.view {
+  font-weight: 100;
+}
 
 .thunar statusbar {
+  border-top: 0px solid @border_bright;
+  margin-top: -2px;
+  margin-bottom: 0px;
   margin-right: -9px;
   margin-left: -9px;
-  padding: 0px; }
-  .thunar statusbar frame box {
-    margin-bottom: -3px;
-    margin-top: -3px; }
-    .thunar statusbar frame box label {
-      margin-top: 1px;
-      margin-bottom: -1px; }
+  padding: 0px;
+}
+
+.thunar statusbar frame box {
+  margin-bottom: -3px;
+  margin-top: -3px;
+}
+
+.thunar statusbar frame box label {
+  margin-top: 1px;
+  margin-bottom: -1px;
+}
 
 .thunar widget.view:selected {
-  background-color: shade(@selected_bg_color, 3.0); }
-  .thunar widget.view:selected:focus {
-    background-color: @selected_bg_color; }
+  background-color: shade(@selected_bg_color, 3.0);
+}
 
+.thunar widget.view:selected:focus {
+  background-color: @selected_bg_color;
+}
 
 ThunarTreeView {
   -GtkTreeView-enable-tree-lines: true;
 }
 
-
-.thunar { 
--gtk-enable-tree-lines: true;
-} 
-
-.thunar entry {
-	margin: 1px 0 2px;
+.thunar {
+  -gtk-enable-tree-lines: true;
 }
 
+.thunar entry {
+  margin: 1px 0 1px;
+}
 
-.treeview {
+.thunar .treeview {
   font-family: tahoma;
   font-weight: 1px;
+}
+
+.thunar box.vertical {
+  background-image: url("../assets/folders.png");
+  background-repeat: no-repeat;
+  padding-top: 20px;
+  margin-top: 2px;
+  border-top: 1px solid @bg_shade;
+  border-right: 1px solid @bg_bright;
+  border-left: 1px solid @bg_shade;
+  border-bottom: 1px solid @bg_bright;
+  box-shadow: 1px 1px @bg_bright inset, -1px -1px @bg_shade inset;
+}
+
+.thunar box.vertical scrolledwindow {
+  border-image: none;
+  border-right: 1px solid @bg_shade;
+  border-left: 1px solid @bg_bright;
+  border-top: 1px @bg_shade;
+  border-bottom: 1px solid @bg_shade;
+}
+
+.thunar grid paned paned {
+  margin: -1px -0px 0;
+}
+
+.thunar grid paned paned grid {
+  margin: 2px 0 0 -1px;
+  padding: 0px 0 0 0;
+  border-top: 1px solid @bg_shade;
+}
+
+.thunar stack {
+  margin: 0px 0 0 -0px;
+  padding: 0px 0 0 0;
+  border-top: 0px solid @border_dark;
+  border-right: 1px solid @border_bright;
+  border-bottom: 0px solid @border_bright;
+  border-left: 1px solid @bg_shade;
+  border-image: none !important;
+  box-shadow: 1px 1px @bg_bright inset, -1px -1px @bg_shade inset;
 }
 
 .caja-navigation-window > grid > paned > * {
   border-top: 2px solid;
   border-image: url("assets/headerbox.png");
-  border-image-slice: 2 2 2 2
+  border-image-slice: 2 2 2 2;
 }
 
 .thunar-sidebar .thunar-treeview,
@@ -172,9 +271,13 @@ ThunarTreeView {
   font-family: Tahoma;
 }
 
+.Thunar box.vertical {
+  border: none;
+}
+
 .caja-side-pane scrolledwindow {
   background-image: url("assets/wvleft.png");
-  background-position: left top; 
+  background-position: left top;
   background-repeat: no-repeat;
 }
 
@@ -185,13 +288,14 @@ ThunarTreeView {
   margin-right: 0px;
   margin-bottom: 0px;
   color: @toolbar_fg_color;
-  background-color: @toolbar_bg_color; 
+  background-color: @toolbar_bg_color;
   border-top: 0px solid;
   border-bottom: 0px solid;
   border-right: 2px solid;
   border-left: 7px solid;
   border-image: url("assets/fm_toolbar.png");
-  border-image-slice: 2 2 2 7; }
+  border-image-slice: 2 2 2 7;
+}
 
 .caja-navigation-window paned > box > paned > box > .horizontal {
   margin: -4px;
@@ -203,7 +307,8 @@ ThunarTreeView {
   border-right: 2px solid;
   border-left: 7px solid;
   border-image: url("assets/fm_toolbar.png");
-  border-image-slice: 2 2 2 7; }
+  border-image-slice: 2 2 2 7;
+}
 
 .caja-navigation-window grid > paned > box > notebook widget > box {
   padding: 1px;
@@ -212,16 +317,16 @@ ThunarTreeView {
   border-bottom: 1px solid @light_shadow;
   border-right: 1px solid @light_shadow;
   border-radius: 0px;
-  box-shadow: 1px 1px @borders inset, -1px -1px @theme_bg_color inset; }
+  box-shadow: 1px 1px @borders inset, -1px -1px @theme_bg_color inset;
+}
 
 /* For later use (perhaps)?
 
 .thunar entry {
-	margin: 40px 0 3px -100px;
+  margin: 40px 0 3px -100px;
 }
 
 .thunar toolbar {
-
   padding: 0px 8px 1px;
   background-repeat: no-repeat;
   border-top: 1px solid @bg_bright;
@@ -229,6 +334,13 @@ ThunarTreeView {
   min-height: 10px;
   max-height: 10px;
   margin-left: 1px;
-  box-shadow: -1px -1px @bg_shade,  -2px -2px @bg_shade inset, -1px -1px white inset;}
+  box-shadow: -1px -1px @bg_shade, -2px -2px @bg_shade inset, -1px -1px white inset;
+}
 
+window grid paned box.vertical  {
+	margin-bottom: 20px;
+	box-shadow: 0px 19px @bg_shade, 0px 1px @bg_color, 1px 20px @border_bright, 1px 19px @bg_color, 1px 2px @bg_shade, 1px 1px @bg_color
+
+}
 */
+
